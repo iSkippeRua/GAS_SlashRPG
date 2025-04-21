@@ -2,7 +2,6 @@
 
 
 #include "Characters/GAS_SlashHeroCharacter.h"
-
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -11,6 +10,7 @@
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "Components/Input/GAS_SlashInputComponent.h"
 #include "GAS_SlashGameplayTags.h"
+#include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 
 AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
 {
@@ -34,6 +34,16 @@ AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f);
 	GetCharacterMovement()->MaxWalkSpeed = 400.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
+}
+
+void AGAS_SlashHeroCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+
+	if(SlashAbilitySystemComponent && SlashAttributeSet)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Owner Actor: %s, Avatar Actor: %s"), *SlashAbilitySystemComponent->GetOwnerActor()->GetActorLabel(), *SlashAbilitySystemComponent->GetAvatarActor()->GetActorLabel());
+	}
 }
 
 void AGAS_SlashHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
