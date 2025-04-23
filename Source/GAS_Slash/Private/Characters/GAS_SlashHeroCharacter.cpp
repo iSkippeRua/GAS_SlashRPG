@@ -10,6 +10,7 @@
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "Components/Input/GAS_SlashInputComponent.h"
 #include "GAS_SlashGameplayTags.h"
+#include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 
 AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
@@ -40,10 +41,13 @@ void AGAS_SlashHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 
-	if(SlashAbilitySystemComponent && SlashAttributeSet)
+	if(!CharacterStartUpData.IsNull())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Owner Actor: %s, Avatar Actor: %s"), *SlashAbilitySystemComponent->GetOwnerActor()->GetActorLabel(), *SlashAbilitySystemComponent->GetAvatarActor()->GetActorLabel());
-	}
+		if(UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.LoadSynchronous())
+		{
+			LoadedData->GiveToAbilitySystemComponent(SlashAbilitySystemComponent);
+		}
+	};
 }
 
 void AGAS_SlashHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

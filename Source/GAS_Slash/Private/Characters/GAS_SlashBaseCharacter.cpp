@@ -28,5 +28,7 @@ void AGAS_SlashBaseCharacter::PossessedBy(AController* NewController)
 	if(SlashAbilitySystemComponent)
 	{
 		SlashAbilitySystemComponent->InitAbilityActorInfo(this, this);
+		
+		ensureMsgf(!CharacterStartUpData.IsNull(), TEXT("Forgot to assign start up data to %s"), *GetName());
 	}
 }

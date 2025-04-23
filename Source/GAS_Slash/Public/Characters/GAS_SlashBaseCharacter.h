@@ -7,6 +7,7 @@
 #include "AbilitySystemInterface.h"
 #include "GAS_SlashBaseCharacter.generated.h"
 
+class UDataAsset_StartUpDataBase;
 class UGAS_SlashAttributeSet;
 class UGAS_SlashAbilitySystemComponent;
 
@@ -28,6 +29,9 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	UGAS_SlashAttributeSet* SlashAttributeSet;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData")
+	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;
 
 public:
 	FORCEINLINE UGAS_SlashAbilitySystemComponent* GetSlashAbilitySystemComponent() const { return SlashAbilitySystemComponent; }
