@@ -11,7 +11,7 @@
 #include "Components/Input/GAS_SlashInputComponent.h"
 #include "GAS_SlashGameplayTags.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
-#include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
+#include "Components/Combat/HeroCombatComponent.h"
 
 AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
 {
@@ -35,6 +35,8 @@ AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f);
 	GetCharacterMovement()->MaxWalkSpeed = 400.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
+
+	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
 }
 
 void AGAS_SlashHeroCharacter::PossessedBy(AController* NewController)

@@ -3,6 +3,7 @@
 
 #include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
+#include "Components/Combat/PawnCombatComponent.h"
 
 void UGAS_SlashGameplayAbility::OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo,
 	const FGameplayAbilitySpec& Spec)
@@ -31,4 +32,14 @@ void UGAS_SlashGameplayAbility::EndAbility(const FGameplayAbilitySpecHandle Hand
 			ActorInfo->AbilitySystemComponent->ClearAbility(Handle);
 		}
 	}
+}
+
+UPawnCombatComponent* UGAS_SlashGameplayAbility::GetPawnCombatComponentFromActorInfo() const
+{
+	return GetAvatarActorFromActorInfo()->FindComponentByClass<UPawnCombatComponent>();
+}
+
+UGAS_SlashAbilitySystemComponent* UGAS_SlashGameplayAbility::GetSlashAbilitySystemComponentFromActorInfo() const
+{
+	return Cast<UGAS_SlashAbilitySystemComponent>(CurrentActorInfo->AbilitySystemComponent);
 }
