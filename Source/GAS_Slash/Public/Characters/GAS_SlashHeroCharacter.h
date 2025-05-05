@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Characters/GAS_SlashBaseCharacter.h"
+#include "GameplayTagContainer.h"
 #include "GAS_SlashHeroCharacter.generated.h"
 
 class UDataAsset_InputConfig;
@@ -47,6 +48,9 @@ private:
 
 	void Input_Move(const FInputActionValue& InputActionValue);
 	void Input_Look(const FInputActionValue& InputActionValue);
+
+	void Input_AbilityInputPressed(FGameplayTag InInputTag);
+	void Input_AbilityInputReleased(FGameplayTag InInputTag);
 	
 #pragma endregion
 

@@ -8,9 +8,7 @@
 
 class UGAS_SlashAbilitySystemComponent;
 class UGAS_SlashGameplayAbility;
-/**
- * 
- */
+
 UCLASS()
 class GAS_SLASH_API UDataAsset_StartUpDataBase : public UDataAsset
 {

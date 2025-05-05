@@ -6,12 +6,12 @@
 #include "AbilitySystemComponent.h"
 #include "GAS_SlashAbilitySystemComponent.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class GAS_SLASH_API UGAS_SlashAbilitySystemComponent : public UAbilitySystemComponent
 {
 	GENERATED_BODY()
-	
+
+public:
+	void OnAbilityInputPressed(const FGameplayTag& InInputTag);
+	void OnAbilityInputReleased(const FGameplayTag& InInputTag);
 };

@@ -10,6 +10,7 @@
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "Components/Input/GAS_SlashInputComponent.h"
 #include "GAS_SlashGameplayTags.h"
+#include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 #include "Components/Combat/HeroCombatComponent.h"
 
@@ -65,6 +66,8 @@ void AGAS_SlashHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 	UGAS_SlashInputComponent* GAS_SlashInputComponent = CastChecked<UGAS_SlashInputComponent>(PlayerInputComponent);
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_Move, ETriggerEvent::Triggered, this, &ThisClass::Input_Move);
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_Look, ETriggerEvent::Triggered, this, &ThisClass::Input_Look);
+
+	GAS_SlashInputComponent->BindAbilityInputAction(InputConfigDataAsset, this, &ThisClass::Input_AbilityInputPressed, &ThisClass::Input_AbilityInputReleased);
 }
 
 void AGAS_SlashHeroCharacter::Input_Move(const FInputActionValue& InputActionValue)
@@ -98,4 +101,14 @@ void AGAS_SlashHeroCharacter::Input_Look(const FInputActionValue& InputActionVal
 	{
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AGAS_SlashHeroCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
+{
+	SlashAbilitySystemComponent->OnAbilityInputPressed(InInputTag);
+}
+
+void AGAS_SlashHeroCharacter::Input_AbilityInputReleased(FGameplayTag InInputTag)
+{
+	SlashAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
 }
