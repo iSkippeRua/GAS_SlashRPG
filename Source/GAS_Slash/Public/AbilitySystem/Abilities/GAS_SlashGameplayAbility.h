@@ -25,7 +25,7 @@ protected:
 	virtual void OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec) override;
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
 	
-	UPROPERTY(EditDefaultsOnly, Category="GAS_SlashAbility")
+	UPROPERTY(EditDefaultsOnly, Category="GAS_Slash|Ability")
 	EGAS_SlashAbilityActivationPolicy AbilityActivationPolicy = EGAS_SlashAbilityActivationPolicy::OnTriggered;
 
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")

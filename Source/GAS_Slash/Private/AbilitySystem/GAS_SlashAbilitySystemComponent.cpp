@@ -2,6 +2,7 @@
 
 
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
+#include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
 
 void UGAS_SlashAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInputTag)
 {
@@ -17,4 +18,22 @@ void UGAS_SlashAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag&
 
 void UGAS_SlashAbilitySystemComponent::OnAbilityInputReleased(const FGameplayTag& InInputTag)
 {
+}
+
+void UGAS_SlashAbilitySystemComponent::GrantHeroWeaponAbilities(
+	const TArray<FSlashHeroAbilitySet>& InDefaultWeaponAbilities, int32 ApplyLevel, TArray<FGameplayAbilitySpecHandle>& OutGrantedAbilitySpecHandles)
+{
+	if(InDefaultWeaponAbilities.IsEmpty()) return;
+
+	for(const FSlashHeroAbilitySet& AbilitySet : InDefaultWeaponAbilities)
+	{
+		if(!AbilitySet.IsValid()) continue;
+
+		FGameplayAbilitySpec AbilitySpec(AbilitySet.AbilityToGrant);
+		AbilitySpec.SourceObject = GetAvatarActor();
+		AbilitySpec.Level = ApplyLevel;
+		AbilitySpec.GetDynamicSpecSourceTags().AddTag(AbilitySet.InputTag);
+		
+		OutGrantedAbilitySpecHandles.AddUnique(GiveAbility(AbilitySpec));
+	}
 }

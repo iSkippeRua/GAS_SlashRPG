@@ -5,11 +5,6 @@
 #include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 
-bool FSlashHeroAbilitySet::IsValid() const
-{
-	return InputTag.IsValid() && AbilityToGrant;
-}
-
 void UDataAsset_HeroStartUpData::GiveToAbilitySystemComponent(UGAS_SlashAbilitySystemComponent* InASCToGive,
 	int32 ApplyLevel)
 {
