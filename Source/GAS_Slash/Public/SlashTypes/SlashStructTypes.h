@@ -7,7 +7,7 @@
 
 class UInputMappingContext;
 class UGAS_SlashHeroLinkedAnimLayer;
-class UGAS_SlashGameplayAbility;
+class UGAS_SlashHeroGameplayAbility;
 
 USTRUCT(BlueprintType)
 struct FSlashHeroAbilitySet
@@ -18,7 +18,7 @@ struct FSlashHeroAbilitySet
 	FGameplayTag InputTag;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	TSubclassOf<UGAS_SlashGameplayAbility> AbilityToGrant;
+	TSubclassOf<UGAS_SlashHeroGameplayAbility> AbilityToGrant;
 
 	bool IsValid() const;
 };

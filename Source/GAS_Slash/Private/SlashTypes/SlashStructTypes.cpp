@@ -2,7 +2,7 @@
 
 
 #include "SlashTypes/SlashStructTypes.h"
-#include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
+#include "AbilitySystem/Abilities/GAS_SlashHeroGameplayAbility.h"
 
 bool FSlashHeroAbilitySet::IsValid() const
 {
