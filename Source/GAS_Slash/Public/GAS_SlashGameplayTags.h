@@ -29,4 +29,7 @@ namespace GAS_SlashGameplayTags
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Event_Unequip_Axe);
 
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_JumpToFinisher);
+
+	/*--- Enemy Tags ---*/
+	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Weapon);
 }

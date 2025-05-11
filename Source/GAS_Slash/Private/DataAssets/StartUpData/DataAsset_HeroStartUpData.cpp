@@ -2,8 +2,9 @@
 
 
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
-#include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
+#include "AbilitySystem/Abilities/GAS_SlashHeroGameplayAbility.h"
+
 
 void UDataAsset_HeroStartUpData::GiveToAbilitySystemComponent(UGAS_SlashAbilitySystemComponent* InASCToGive,
 	int32 ApplyLevel)
