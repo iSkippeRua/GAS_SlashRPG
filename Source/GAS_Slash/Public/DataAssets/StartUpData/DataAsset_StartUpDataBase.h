@@ -8,6 +8,7 @@
 
 class UGAS_SlashAbilitySystemComponent;
 class UGAS_SlashGameplayAbility;
+class UGameplayEffect;
 
 UCLASS()
 class GAS_SLASH_API UDataAsset_StartUpDataBase : public UDataAsset
@@ -25,4 +26,7 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "StartUpData")
 	TArray<TSubclassOf<UGAS_SlashGameplayAbility>> ReactiveAbilities;
+
+	UPROPERTY(EditDefaultsOnly, Category = "StartUpData")
+	TArray<TSubclassOf<UGameplayEffect>> StartUpGameplayEffects;
 };
