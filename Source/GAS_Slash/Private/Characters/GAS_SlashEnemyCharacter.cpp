@@ -24,6 +24,11 @@ AGAS_SlashEnemyCharacter::AGAS_SlashEnemyCharacter()
 	EnemyCombatComponent = CreateDefaultSubobject<UEnemyCombatComponent>(TEXT("EnemyCombatComponent"));
 }
 
+UPawnCombatComponent* AGAS_SlashEnemyCharacter::GetPawnCombatComponent() const
+{
+	return EnemyCombatComponent;
+}
+
 void AGAS_SlashEnemyCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
@@ -43,8 +48,6 @@ void AGAS_SlashEnemyCharacter::InitEnemyStartUpData()
 				if(UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.Get())
 				{
 					LoadedData->GiveToAbilitySystemComponent(SlashAbilitySystemComponent);
-
-					UE_LOG(LogTemp, Warning, TEXT("Enemy Start Up Data Loaded"));
 				}
 			}
 		)

@@ -17,7 +17,8 @@ UCLASS()
 class GAS_SLASH_API AGAS_SlashHeroCharacter : public AGAS_SlashBaseCharacter
 {
 	GENERATED_BODY()
-	
+
+	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
 public:
 	AGAS_SlashHeroCharacter();
 	

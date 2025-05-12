@@ -7,8 +7,15 @@
 #include "Components/PawnExtensionComponentBase.h"
 #include "PawnCombatComponent.generated.h"
 
-
 class AGAS_SlashWeaponBase;
+
+UENUM(BlueprintType)
+enum class EToggleDamageType : uint8
+{
+	CurrentEquippedWeapon,
+	LeftHand,
+	RightHand
+};
 
 UCLASS()
 class GAS_SLASH_API UPawnCombatComponent : public UPawnExtensionComponentBase
@@ -27,6 +34,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Combat")
 	AGAS_SlashWeaponBase* GetCharacterCurrentEquippedWeapon() const;
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Combat")
+	void ToggleWeaponCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType = EToggleDamageType::CurrentEquippedWeapon);
 		
 private:
 	TMap<FGameplayTag, AGAS_SlashWeaponBase*> CharacterCarriedWeaponMap;

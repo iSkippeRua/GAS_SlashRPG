@@ -40,6 +40,11 @@ AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
 	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
 }
 
+UPawnCombatComponent* AGAS_SlashHeroCharacter::GetPawnCombatComponent() const
+{
+	return HeroCombatComponent;
+}
+
 void AGAS_SlashHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);

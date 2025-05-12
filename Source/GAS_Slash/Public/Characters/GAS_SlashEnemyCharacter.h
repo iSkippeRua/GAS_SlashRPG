@@ -16,6 +16,8 @@ class GAS_SLASH_API AGAS_SlashEnemyCharacter : public AGAS_SlashBaseCharacter
 public:
 	AGAS_SlashEnemyCharacter();
 
+	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+
 protected:
 	virtual void PossessedBy(AController* NewController) override;
 	

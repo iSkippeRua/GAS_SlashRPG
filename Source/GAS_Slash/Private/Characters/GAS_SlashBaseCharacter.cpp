@@ -21,6 +21,11 @@ UAbilitySystemComponent* AGAS_SlashBaseCharacter::GetAbilitySystemComponent() co
 	return GetSlashAbilitySystemComponent();
 }
 
+UPawnCombatComponent* AGAS_SlashBaseCharacter::GetPawnCombatComponent() const
+{
+	return nullptr;
+}
+
 void AGAS_SlashBaseCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);

@@ -3,6 +3,7 @@
 
 #include "Components/Combat/PawnCombatComponent.h"
 #include "Items/Weapons/GAS_SlashWeaponBase.h"
+#include "Components/BoxComponent.h"
 
 void UPawnCombatComponent::RegisterSpawnedWeapon(FGameplayTag InWeaponTagToRegister,
                                                  AGAS_SlashWeaponBase* InWeaponToRegister, bool bRegisterAsEquippedWeapon)
@@ -39,4 +40,24 @@ AGAS_SlashWeaponBase* UPawnCombatComponent::GetCharacterCurrentEquippedWeapon() 
 	}
 
 	return GetCharacterCarriedWeaponByTag(CurrentEquippedWeaponTag);
+}
+
+void UPawnCombatComponent::ToggleWeaponCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType)
+{
+	if(ToggleDamageType == EToggleDamageType::CurrentEquippedWeapon)
+	{
+		AGAS_SlashWeaponBase* WeaponToToggle = GetCharacterCurrentEquippedWeapon();
+
+		check(WeaponToToggle);
+
+		if(bShouldEnable)
+		{
+			WeaponToToggle->GetWeaponCollisionBox()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+			UE_LOG(LogTemp, Warning, TEXT("Weapon Collision Enabled"))
+		} else
+		{
+			WeaponToToggle->GetWeaponCollisionBox()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			UE_LOG(LogTemp, Warning, TEXT("Weapon Collision Dissabled"))
+		}
+	}
 }

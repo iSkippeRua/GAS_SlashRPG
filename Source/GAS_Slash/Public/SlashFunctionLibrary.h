@@ -5,17 +5,12 @@
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "SlashTypes/SlashEnumTypes.h"
 #include "SlashFunctionLibrary.generated.h"
 
+class UPawnCombatComponent;
 struct FGameplayTag;
 class UGAS_SlashAbilitySystemComponent;
-
-UENUM()
-enum class ESlashConfirmType : uint8
-{
-	Yes,
-	No
-};
 
 UCLASS()
 class GAS_SLASH_API USlashFunctionLibrary : public UBlueprintFunctionLibrary
@@ -35,4 +30,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|FunctionLibrary", meta = (DisplayName = "Does Actor Have Tag", ExpandEnumAsExecs = "OutConfirmType"))
 	static void BP_DoesActorHaveTag(AActor* InActor, FGameplayTag TagToCheck, ESlashConfirmType& OutConfirmType);
+
+	static UPawnCombatComponent* NativeGetPawnCombatComponentFromActor(AActor* InActor);
+	
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|FunctionLibrary", meta = (DisplayName = "Get Pawn Combat Component From Actor", ExpandEnumAsExecs = "OutValidType"))
+	static UPawnCombatComponent* BP_GetPawnCombatComponentFromActor(AActor* InActor, ESlashValidType& OutValidType);
 };

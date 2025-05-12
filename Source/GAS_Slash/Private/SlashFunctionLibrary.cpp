@@ -4,6 +4,7 @@
 #include "SlashFunctionLibrary.h"
 #include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
+#include "Interfaces/PawnCombatInterface.h"
 
 UGAS_SlashAbilitySystemComponent* USlashFunctionLibrary::NativeGetSlashASCFromActor(AActor* InActor)
 {
@@ -43,5 +44,27 @@ void USlashFunctionLibrary::BP_DoesActorHaveTag(AActor* InActor, FGameplayTag Ta
 	ESlashConfirmType& OutConfirmType)
 {
 	OutConfirmType = NativeDoesActorHaveTag(InActor, TagToCheck) ? ESlashConfirmType::Yes : ESlashConfirmType::No;
+}
+
+UPawnCombatComponent* USlashFunctionLibrary::NativeGetPawnCombatComponentFromActor(AActor* InActor)
+{
+	check(InActor);
+
+	if(IPawnCombatInterface* PawnCombatInterface = Cast<IPawnCombatInterface>(InActor))
+	{
+		return PawnCombatInterface->GetPawnCombatComponent();
+	}
+
+	return nullptr;
+}
+
+UPawnCombatComponent* USlashFunctionLibrary::BP_GetPawnCombatComponentFromActor(AActor* InActor,
+	ESlashValidType& OutValidType)
+{
+	UPawnCombatComponent* CombatComponent = NativeGetPawnCombatComponentFromActor(InActor);
+	
+	OutValidType = CombatComponent ? ESlashValidType::Valid : ESlashValidType::Invalid;
+
+	return CombatComponent;
 }
 
