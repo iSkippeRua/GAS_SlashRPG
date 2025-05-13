@@ -37,6 +37,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Combat")
 	void ToggleWeaponCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType = EToggleDamageType::CurrentEquippedWeapon);
+
+	virtual void OnHitTargetActor(AActor* HitActor);
+	virtual void OnWeaponPulledFromTargetActor(AActor* InteractedActor);
+
+protected:
+	TArray<AActor*> OverlappedActors;
 		
 private:
 	TMap<FGameplayTag, AGAS_SlashWeaponBase*> CharacterCarriedWeaponMap;
