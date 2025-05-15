@@ -24,6 +24,9 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
 	UHeroCombatComponent* GetHeroCombatComponentFromActorInfo();
+
+	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
+	FGameplayEffectSpecHandle MakeHeroDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float InWeaponBaseDamage, FGameplayTag InCurrentAttackTypeTag, int32 InUsedComboCount);
 	
 private:
 	TWeakObjectPtr<AGAS_SlashHeroCharacter> CachedSlashHeroCharacter;

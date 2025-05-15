@@ -13,3 +13,10 @@ enum class ESlashValidType : uint8
 	Valid,
 	Invalid
 };
+
+UENUM()
+enum class ESlashSuccessTypes : uint8
+{
+	Successful,
+	Failed
+};

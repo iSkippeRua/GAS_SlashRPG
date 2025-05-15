@@ -44,4 +44,8 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Damage")
 	FGameplayAttributeData DefencePower;
 	ATTRIBUTE_ACCESSORS(UGAS_SlashAttributeSet, DefencePower);
+
+	UPROPERTY(BlueprintReadOnly, Category = "Damage")
+	FGameplayAttributeData DamageTaken;
+	ATTRIBUTE_ACCESSORS(UGAS_SlashAttributeSet, DamageTaken);
 };

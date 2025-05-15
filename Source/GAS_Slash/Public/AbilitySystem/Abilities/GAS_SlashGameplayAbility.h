@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Abilities/GameplayAbility.h"
+#include "SlashTypes/SlashEnumTypes.h"
 #include "GAS_SlashGameplayAbility.generated.h"
 
 class UPawnCombatComponent;
@@ -33,4 +34,9 @@ protected:
 
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
 	UGAS_SlashAbilitySystemComponent* GetSlashAbilitySystemComponentFromActorInfo() const;
+
+	FActiveGameplayEffectHandle NativeApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& InSpecHandle);
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Ability", meta = (DisplayName = "Apply Gameplay Effect Spec Handle To Target Actor", ExpandEnumAsExecs = "OutSuccessType"))
+	FActiveGameplayEffectHandle BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& InSpecHandle, ESlashSuccessTypes& OutSuccessType);
 };
