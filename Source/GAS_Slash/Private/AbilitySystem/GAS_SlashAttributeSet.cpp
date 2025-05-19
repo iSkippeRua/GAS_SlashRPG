@@ -3,6 +3,8 @@
 
 #include "AbilitySystem/GAS_SlashAttributeSet.h"
 #include "GameplayEffectExtension.h"
+#include "SlashFunctionLibrary.h"
+#include "GAS_SlashGameplayTags.h"
 
 #include "SlashDebugHelper.h"
 
@@ -46,5 +48,10 @@ void UGAS_SlashAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
 		);
 
 		Debug::Print(DebugString, FColor::Emerald);
+
+		if(NewCurrentHealth == 0.f)
+		{
+			USlashFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), GAS_SlashGameplayTags::Shared_Status_Dead);
+		}
 	}
 }
