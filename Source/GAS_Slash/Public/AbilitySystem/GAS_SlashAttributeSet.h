@@ -21,6 +21,8 @@ class GAS_SLASH_API UGAS_SlashAttributeSet : public UAttributeSet
 public:
 	UGAS_SlashAttributeSet();
 
+	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
+
 	UPROPERTY(BlueprintReadOnly, Category = "Health")
 	FGameplayAttributeData CurrentHealth;
 	ATTRIBUTE_ACCESSORS(UGAS_SlashAttributeSet, CurrentHealth);
