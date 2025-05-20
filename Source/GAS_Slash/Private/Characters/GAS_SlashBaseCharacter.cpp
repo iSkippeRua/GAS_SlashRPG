@@ -26,6 +26,11 @@ UPawnCombatComponent* AGAS_SlashBaseCharacter::GetPawnCombatComponent() const
 	return nullptr;
 }
 
+UPawnUIComponent* AGAS_SlashBaseCharacter::GetPawnUIComponent() const
+{
+	return nullptr;
+}
+
 void AGAS_SlashBaseCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);

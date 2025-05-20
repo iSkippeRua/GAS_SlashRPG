@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
 #include "Interfaces/PawnCombatInterface.h"
+#include "Interfaces/PawnUIInterface.h"
 #include "GAS_SlashBaseCharacter.generated.h"
 
 class UDataAsset_StartUpDataBase;
@@ -13,7 +14,7 @@ class UGAS_SlashAttributeSet;
 class UGAS_SlashAbilitySystemComponent;
 
 UCLASS()
-class GAS_SLASH_API AGAS_SlashBaseCharacter : public ACharacter, public IAbilitySystemInterface, public IPawnCombatInterface
+class GAS_SLASH_API AGAS_SlashBaseCharacter : public ACharacter, public IAbilitySystemInterface, public IPawnCombatInterface, public IPawnUIInterface
 {
 	GENERATED_BODY()
 
@@ -23,6 +24,8 @@ public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 
 	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+
+	virtual UPawnUIComponent* GetPawnUIComponent() const override;
 	
 protected:
 	virtual void PossessedBy(AController* NewController) override;

@@ -6,6 +6,7 @@
 #include "Characters/GAS_SlashBaseCharacter.h"
 #include "GAS_SlashEnemyCharacter.generated.h"
 
+class UEnemyUIComponent;
 class UEnemyCombatComponent;
 
 UCLASS()
@@ -18,11 +19,19 @@ public:
 
 	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
 
+	virtual UPawnUIComponent* GetPawnUIComponent() const override;
+
+	virtual UEnemyUIComponent* GetEnemyUIComponent() const override;
+
 protected:
 	virtual void PossessedBy(AController* NewController) override;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat")
 	UEnemyCombatComponent* EnemyCombatComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
+	UEnemyUIComponent* EnemyUIComponent;
+	
 
 private:
 	void InitEnemyStartUpData();

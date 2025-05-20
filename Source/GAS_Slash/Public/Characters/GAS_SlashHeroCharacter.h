@@ -12,15 +12,21 @@ class USpringArmComponent;
 class UCameraComponent;
 struct FInputActionValue;
 class UHeroCombatComponent;
+class UHeroUIComponent;
 
 UCLASS()
 class GAS_SLASH_API AGAS_SlashHeroCharacter : public AGAS_SlashBaseCharacter
 {
 	GENERATED_BODY()
-
-	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+	
 public:
 	AGAS_SlashHeroCharacter();
+
+	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+
+	virtual UPawnUIComponent* GetPawnUIComponent() const override;
+
+	virtual UHeroUIComponent* GetHeroUIComponent() const override;
 	
 protected:
 	virtual void PossessedBy(AController* NewController) override;
@@ -39,6 +45,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Combat", meta=(AllowPrivateAccess = "true"))
 	UHeroCombatComponent* HeroCombatComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="UI", meta=(AllowPrivateAccess = "true"))
+	UHeroUIComponent* HeroUIComponent;
 	
 #pragma endregion
 
