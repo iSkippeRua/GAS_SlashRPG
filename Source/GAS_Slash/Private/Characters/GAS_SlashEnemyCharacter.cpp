@@ -2,10 +2,13 @@
 
 
 #include "Characters/GAS_SlashEnemyCharacter.h"
+#include "Components/WidgetComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/Combat/EnemyCombatComponent.h"
 #include "Components/UI/EnemyUIComponent.h"
 #include "Engine/AssetManager.h"
+#include "Widgets/SlashWidgetBase.h"
+
 #include "DataAssets/StartUpData/DataAsset_EnemyStartUpData.h"
 
 AGAS_SlashEnemyCharacter::AGAS_SlashEnemyCharacter()
@@ -25,6 +28,9 @@ AGAS_SlashEnemyCharacter::AGAS_SlashEnemyCharacter()
 	EnemyCombatComponent = CreateDefaultSubobject<UEnemyCombatComponent>(TEXT("EnemyCombatComponent"));
 
 	EnemyUIComponent = CreateDefaultSubobject<UEnemyUIComponent>(TEXT("EnemyUIComponent"));
+
+	EnemyHealthWidgetComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("EnemyHealthWidgetComponent"));
+	EnemyHealthWidgetComponent->SetupAttachment(GetMesh());
 }
 
 UPawnCombatComponent* AGAS_SlashEnemyCharacter::GetPawnCombatComponent() const
@@ -40,6 +46,16 @@ UPawnUIComponent* AGAS_SlashEnemyCharacter::GetPawnUIComponent() const
 UEnemyUIComponent* AGAS_SlashEnemyCharacter::GetEnemyUIComponent() const
 {
 	return EnemyUIComponent;
+}
+
+void AGAS_SlashEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	if(USlashWidgetBase* HealthWidget = Cast<USlashWidgetBase>(EnemyHealthWidgetComponent->GetUserWidgetObject()))
+	{
+		HealthWidget->InitEnemyCreatedWidget(this);
+	}
 }
 
 void AGAS_SlashEnemyCharacter::PossessedBy(AController* NewController)
