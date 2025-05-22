@@ -3,6 +3,7 @@
 
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 #include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
+#include "AbilitySystem/Abilities/GAS_SlashHeroGameplayAbility.h"
 
 void UGAS_SlashAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInputTag)
 {
