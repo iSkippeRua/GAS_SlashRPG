@@ -7,16 +7,10 @@
 #include "Perception/AISenseConfig_Sight.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
-#include "SlashDebugHelper.h"
 
 
 ASlashAIController::ASlashAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UCrowdFollowingComponent>("PathFollowingComponent"))
 {
-	if(UCrowdFollowingComponent* CrowdFollowingComponent = Cast<UCrowdFollowingComponent>(GetPathFollowingComponent()))
-	{
-		Debug::Print(TEXT("CrowdFollowingComponent is Valid"), FColor::Cyan);
-	}
-
 	AISenseConfig_Sight = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("EnemySenseConfig_Sight"));
 	AISenseConfig_Sight->DetectionByAffiliation.bDetectEnemies = true;
 	AISenseConfig_Sight->DetectionByAffiliation.bDetectFriendlies = false;
@@ -39,7 +33,7 @@ ETeamAttitude::Type ASlashAIController::GetTeamAttitudeTowards(const AActor& Oth
 	
 	const IGenericTeamAgentInterface* OtherTeamAgent = Cast<const IGenericTeamAgentInterface>(PawnToCheck->GetController());
 
-	if(OtherTeamAgent && OtherTeamAgent->GetGenericTeamId() != GetGenericTeamId())
+	if(OtherTeamAgent && OtherTeamAgent->GetGenericTeamId() < GetGenericTeamId())
 	{
 		return ETeamAttitude::Hostile;
 	}
@@ -47,13 +41,48 @@ ETeamAttitude::Type ASlashAIController::GetTeamAttitudeTowards(const AActor& Oth
 	return ETeamAttitude::Friendly;
 }
 
+void ASlashAIController::BeginPlay()
+{
+	Super::BeginPlay();
+
+	if(UCrowdFollowingComponent* CrowdFollowingComponent = Cast<UCrowdFollowingComponent>(GetPathFollowingComponent()))
+	{
+		CrowdFollowingComponent->SetCrowdSimulationState(bEnableDetourCrowdAvoidance ? ECrowdSimulationState::Enabled : ECrowdSimulationState::Disabled);
+		
+		switch (DetourCrowdAvoidanceQuality)
+		{
+		case 1:
+			CrowdFollowingComponent->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::Low);
+			break;
+		case 2:
+			CrowdFollowingComponent->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::Medium);
+			break;
+		case 3:
+			CrowdFollowingComponent->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::Good);
+			break;
+		case 4:
+			CrowdFollowingComponent->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::High);
+			break;
+		default:
+			break;
+		}
+		
+		CrowdFollowingComponent->SetAvoidanceGroup(1);
+		CrowdFollowingComponent->SetGroupsToAvoid(1);
+		CrowdFollowingComponent->SetCrowdCollisionQueryRange(CollisionQueryRange);
+	}
+}
+
 void ASlashAIController::OnEnemyPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
-	if(Stimulus.WasSuccessfullySensed() && Actor)
+	if(UBlackboardComponent* BlackboardComponent = GetBlackboardComponent())
 	{
-		if(UBlackboardComponent* BlackboardComponent = GetBlackboardComponent())
+		if(!BlackboardComponent->GetValueAsObject(FName("TargetActor")))
 		{
-			BlackboardComponent->SetValueAsObject(FName("TargetActor"), Actor);
+			if(Stimulus.WasSuccessfullySensed() && Actor)
+			{
+				BlackboardComponent->SetValueAsObject(FName("TargetActor"), Actor);
+			}
 		}
 	}
 }
