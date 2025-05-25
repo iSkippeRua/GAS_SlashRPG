@@ -12,13 +12,19 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/ABP_Enemy_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/ABP_Enemy_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/AIC_Enemy_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/AIC_Enemy_Base.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/BB_Enemy_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/BB_Enemy_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/AnimBP/ABP_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/AnimBP/ABP_GruntlingGuardian.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BT_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BT_GruntlingGuardian.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/1/RN/6K7VXE2OTZ49UBBIDPRQEB.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/SlashAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/SlashAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/SlashAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/SlashAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/6/0F/TSHMP7KBYMR89QMEW2NH1K.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AnimInstances/GAS_SlashBaseAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AnimInstances/GAS_SlashBaseAnimInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AnimInstances/GAS_SlashCharacterAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AnimInstances/GAS_SlashCharacterAnimInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AnimInstances/GAS_SlashBaseAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AnimInstances/GAS_SlashBaseAnimInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AnimInstances/GAS_SlashCharacterAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AnimInstances/GAS_SlashCharacterAnimInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -549,7 +555,8 @@
       <workItem from="1747880685018" duration="2196000" />
       <workItem from="1747906616257" duration="10676000" />
       <workItem from="1747996573166" duration="7476000" />
-      <workItem from="1748073130734" duration="1796000" />
+      <workItem from="1748073130734" duration="2372000" />
+      <workItem from="1748149311334" duration="5105000" />
     </task>
     <servers />
   </component>

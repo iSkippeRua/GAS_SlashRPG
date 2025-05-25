@@ -4,6 +4,7 @@
 #include "AnimInstances/GAS_SlashCharacterAnimInstance.h"
 #include "Characters/GAS_SlashBaseCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "KismetAnimationLibrary.h"
 
 void UGAS_SlashCharacterAnimInstance::NativeInitializeAnimation()
 {
@@ -22,4 +23,6 @@ void UGAS_SlashCharacterAnimInstance::NativeThreadSafeUpdateAnimation(float Delt
 	GroundSpeed = OwningCharacter->GetVelocity().Size2D();
 	
 	bHasAcceleration = OwningMovementComponent->GetCurrentAcceleration().SizeSquared2D()>0.f;
+
+	LocomotionDirection = UKismetAnimationLibrary::CalculateDirection(OwningCharacter->GetVelocity(), OwningCharacter->GetActorRotation());
 }

@@ -42,6 +42,8 @@ namespace GAS_SlashGameplayTags
 	
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Melee);
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Ability_Ranged);
+	
+	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Status_Strafing);
 
 	/*--- Shared Tags ---*/
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Event_MeleeHit);

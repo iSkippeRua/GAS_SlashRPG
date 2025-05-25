@@ -17,7 +17,8 @@ public class GAS_Slash : ModuleRules
 			"EnhancedInput", 
 			"GameplayTags",
 			"GameplayTasks", 
-			"AIModule"
+			"AIModule",
+			"AnimGraphRuntime"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
