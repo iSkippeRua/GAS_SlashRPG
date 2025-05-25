@@ -5,8 +5,6 @@
 #include "AbilitySystem/GAS_SlashAttributeSet.h"
 #include "GAS_SlashGameplayTags.h"
 
-#include "SlashDebugHelper.h"
-
 struct FSlashDamageCapture
 {
 	DECLARE_ATTRIBUTE_CAPTUREDEF(AttackPower)

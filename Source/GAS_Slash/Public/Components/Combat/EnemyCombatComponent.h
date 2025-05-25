@@ -6,12 +6,12 @@
 #include "Components/Combat/PawnCombatComponent.h"
 #include "EnemyCombatComponent.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class GAS_SLASH_API UEnemyCombatComponent : public UPawnCombatComponent
 {
 	GENERATED_BODY()
+
+public:
+	virtual void OnHitTargetActor(AActor* HitActor) override;
 	
 };

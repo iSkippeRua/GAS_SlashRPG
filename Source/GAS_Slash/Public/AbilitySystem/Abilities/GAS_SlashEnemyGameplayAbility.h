@@ -21,6 +21,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
 	UEnemyCombatComponent* GetEnemyCombatComponentFromActorInfo();
 
+	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
+	FGameplayEffectSpecHandle MakeEnemyDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, const FScalableFloat& InDamageScalableFloat);
+
 private:
 	TWeakObjectPtr<AGAS_SlashEnemyCharacter> CachedEnemyCharacter;
 };

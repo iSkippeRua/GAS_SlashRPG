@@ -2,7 +2,6 @@
 
 
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
-#include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
 #include "AbilitySystem/Abilities/GAS_SlashHeroGameplayAbility.h"
 
 void UGAS_SlashAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInputTag)
@@ -52,4 +51,27 @@ void UGAS_SlashAbilitySystemComponent::RemoveGrantedHeroWeaponAbilities(UPARAM(r
 	}
 
 	InSpecHandlesToRemove.Empty();
+}
+
+bool UGAS_SlashAbilitySystemComponent::TryActivateAbilityByTag(FGameplayTag AbilityTagToActivate)
+{
+	check(AbilityTagToActivate.IsValid());
+
+	TArray<FGameplayAbilitySpec*> FoundAbilitySpecs;
+	GetActivatableGameplayAbilitySpecsByAllMatchingTags(AbilityTagToActivate.GetSingleTagContainer(), FoundAbilitySpecs);
+
+	if(!FoundAbilitySpecs.IsEmpty())
+	{
+		const int32 RandomAbilityIndex = FMath::RandRange(0, FoundAbilitySpecs.Num() - 1);
+		FGameplayAbilitySpec* SpecToActivate = FoundAbilitySpecs[RandomAbilityIndex];
+
+		check(SpecToActivate);
+
+		if(!SpecToActivate->IsActive())
+		{
+			return TryActivateAbility(SpecToActivate->Handle);
+		}
+	}
+
+	return false;
 }

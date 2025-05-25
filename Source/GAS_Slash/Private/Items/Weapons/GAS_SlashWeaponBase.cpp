@@ -3,6 +3,7 @@
 
 #include "Items/Weapons/GAS_SlashWeaponBase.h"
 #include "Components/BoxComponent.h"
+#include "SlashFunctionLibrary.h"
 
 AGAS_SlashWeaponBase::AGAS_SlashWeaponBase()
 {
@@ -28,7 +29,7 @@ void AGAS_SlashWeaponBase::OnCollisionBoxBeginOverlap(UPrimitiveComponent* Overl
 
 	if(APawn* HitPawn = Cast<APawn>(OtherActor))
 	{
-		if(WeaponOwningPawn != HitPawn)
+		if(USlashFunctionLibrary::IsTargetPawnHostile(WeaponOwningPawn, HitPawn))
 		{
 			OnWeaponHitTarget.ExecuteIfBound(OtherActor);
 		}
@@ -44,7 +45,7 @@ void AGAS_SlashWeaponBase::OnCollisionBoxEndOverlap(UPrimitiveComponent* Overlap
 
 	if(APawn* HitPawn = Cast<APawn>(OtherActor))
 	{
-		if(WeaponOwningPawn != HitPawn)
+		if(USlashFunctionLibrary::IsTargetPawnHostile(WeaponOwningPawn, HitPawn))
 		{
 			OnWeaponPulledFromTarget.ExecuteIfBound(OtherActor);
 		}
