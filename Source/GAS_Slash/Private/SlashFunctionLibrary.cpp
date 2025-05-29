@@ -84,3 +84,8 @@ bool USlashFunctionLibrary::IsTargetPawnHostile(APawn* QueryPawn, APawn* TargetP
 	return false;
 }
 
+float USlashFunctionLibrary::GetScalableFloatValueAtLevel(const FScalableFloat& InScalableFloat, float InLevel)
+{
+	return InScalableFloat.GetValueAtLevel(InLevel);
+}
+
