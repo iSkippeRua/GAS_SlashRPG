@@ -18,7 +18,8 @@ public class GAS_Slash : ModuleRules
 			"GameplayTags",
 			"GameplayTasks", 
 			"AIModule",
-			"AnimGraphRuntime"
+			"AnimGraphRuntime",
+			"MotionWarping"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

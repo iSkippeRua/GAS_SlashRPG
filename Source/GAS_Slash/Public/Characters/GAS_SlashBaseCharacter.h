@@ -12,6 +12,7 @@
 class UDataAsset_StartUpDataBase;
 class UGAS_SlashAttributeSet;
 class UGAS_SlashAbilitySystemComponent;
+class UMotionWarpingComponent;
 
 UCLASS()
 class GAS_SLASH_API AGAS_SlashBaseCharacter : public ACharacter, public IAbilitySystemInterface, public IPawnCombatInterface, public IPawnUIInterface
@@ -35,6 +36,9 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	UGAS_SlashAttributeSet* SlashAttributeSet;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "MotionWarping")
+	UMotionWarpingComponent* MotionWarpingComponent;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData")
 	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;

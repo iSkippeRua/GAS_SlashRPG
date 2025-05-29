@@ -4,6 +4,7 @@
 #include "Characters/GAS_SlashBaseCharacter.h"
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 #include "AbilitySystem/GAS_SlashAttributeSet.h"
+#include "MotionWarpingComponent.h"
 
 AGAS_SlashBaseCharacter::AGAS_SlashBaseCharacter()
 {
@@ -14,6 +15,7 @@ AGAS_SlashBaseCharacter::AGAS_SlashBaseCharacter()
 
 	SlashAbilitySystemComponent = CreateDefaultSubobject<UGAS_SlashAbilitySystemComponent>(TEXT("SlashAbilitySystemComponent"));
 	SlashAttributeSet = CreateDefaultSubobject<UGAS_SlashAttributeSet>(TEXT("SlashAttributeSet"));
+	MotionWarpingComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("MotionWarpingComponent"));
 }
 
 UAbilitySystemComponent* AGAS_SlashBaseCharacter::GetAbilitySystemComponent() const
