@@ -9,8 +9,6 @@
 #include "Components/UI/PawnUIComponent.h"
 #include "Components/UI/HeroUIComponent.h"
 
-#include "SlashDebugHelper.h"
-
 UGAS_SlashAttributeSet::UGAS_SlashAttributeSet()
 {
 	InitCurrentHealth(1.f);
@@ -63,12 +61,6 @@ void UGAS_SlashAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
 		const float NewCurrentHealth = FMath::Clamp(OldHealth - DamageDone, 0.f, GetMaxHealth());
 
 		SetCurrentHealth(NewCurrentHealth);
-
-		const FString DebugString = FString::Printf(
-			TEXT("Old health: %f, Damage Done: %f, NewCurrentHealth: %f"), OldHealth, DamageDone, NewCurrentHealth
-		);
-
-		Debug::Print(DebugString, FColor::Emerald);
 
 		PawnUIComponent->OnCurrentHealthChanged.Broadcast(GetCurrentHealth() / GetMaxHealth());
 
