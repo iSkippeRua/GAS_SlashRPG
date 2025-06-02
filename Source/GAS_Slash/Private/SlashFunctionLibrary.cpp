@@ -9,6 +9,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "GAS_SlashGameplayTags.h"
 
+#include "SlashDebugHelper.h"
+
 UGAS_SlashAbilitySystemComponent* USlashFunctionLibrary::NativeGetSlashASCFromActor(AActor* InActor)
 {
 	check(InActor);
@@ -124,5 +126,14 @@ FGameplayTag USlashFunctionLibrary::ComputeHitReactDirectionTag(AActor* InAttack
 	}
 
 	return GAS_SlashGameplayTags::Shared_Status_HitReact_Front;
+}
+
+bool USlashFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefender)
+{
+	check(InAttacker && InDefender);
+
+	const float DotResult = FVector::DotProduct(InAttacker->GetActorForwardVector(), InDefender->GetActorForwardVector());
+
+	return DotResult < -0.1f;
 }
 

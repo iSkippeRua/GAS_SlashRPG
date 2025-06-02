@@ -3,6 +3,7 @@
 
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 #include "AbilitySystem/Abilities/GAS_SlashHeroGameplayAbility.h"
+#include "GAS_SlashGameplayTags.h"
 
 void UGAS_SlashAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInputTag)
 {
@@ -18,6 +19,15 @@ void UGAS_SlashAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag&
 
 void UGAS_SlashAbilitySystemComponent::OnAbilityInputReleased(const FGameplayTag& InInputTag)
 {
+	if(!InInputTag.IsValid() || !InInputTag.MatchesTag(GAS_SlashGameplayTags::InputTag_MustBeHeld)) return;
+
+	for(const FGameplayAbilitySpec& AbilitySpec : GetActivatableAbilities())
+	{
+		if(AbilitySpec.GetDynamicSpecSourceTags().HasTagExact(InInputTag) && AbilitySpec.IsActive())
+		{
+			CancelAbilityHandle(AbilitySpec.Handle);
+		}
+	}
 }
 
 void UGAS_SlashAbilitySystemComponent::GrantHeroWeaponAbilities(
