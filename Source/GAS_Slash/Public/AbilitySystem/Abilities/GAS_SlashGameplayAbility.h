@@ -25,6 +25,8 @@ class GAS_SLASH_API UGAS_SlashGameplayAbility : public UGameplayAbility
 protected:
 	virtual void OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec) override;
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
+
+	virtual bool DoesAbilitySatisfyTagRequirements(const UAbilitySystemComponent& AbilitySystemComponent, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const override;
 	
 	UPROPERTY(EditDefaultsOnly, Category="GAS_Slash|Ability")
 	EGAS_SlashAbilityActivationPolicy AbilityActivationPolicy = EGAS_SlashAbilityActivationPolicy::OnTriggered;
