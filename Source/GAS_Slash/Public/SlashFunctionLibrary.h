@@ -8,6 +8,7 @@
 #include "SlashTypes/SlashEnumTypes.h"
 #include "SlashFunctionLibrary.generated.h"
 
+struct FGameplayEffectSpecHandle;
 class UPawnCombatComponent;
 struct FGameplayTag;
 class UGAS_SlashAbilitySystemComponent;
@@ -48,4 +49,7 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|FunctionLibrary")
 	static bool IsValidBlock(AActor* InAttacker, AActor* InDefender);
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|FunctionLibrary")
+	static bool ApplyGameplayEffectSpecHandleToTargetActor(AActor* InInstigator, AActor* InTargetActor, const FGameplayEffectSpecHandle& InSpecHandle);
 };

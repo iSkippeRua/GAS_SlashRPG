@@ -12,22 +12,35 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/Materials/CharM_Gruntling_Glacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/Materials/CharM_Gruntling_Glacer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/SK_Gruntling_Glacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Glacer/SK_Gruntling_Glacer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Enemy_Gruntling_Guardian/SK_Gruntling_Guardian_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Weapons/Enemy_Gruntling_Weapons/Meshes/SM_Gruntling_Torch_Internal.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Gruntling/Weapons/Enemy_Gruntling_Weapons/Meshes/SM_Gruntling_Torch_Internal.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/BB_Enemy_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/BB_Enemy_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/DummyEnemy/BP_Dummy_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/DummyEnemy/BP_Dummy_GruntlingGuardian.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/DummyEnemy/BT_Dummy_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/DummyEnemy/BT_Dummy_GruntlingGuardian.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayEffect/CT_GruntlingGuardianStats.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayEffect/CT_GruntlingGuardianStats.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/DA_Hero.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/DA_Hero.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayAbility/GA_Hero_Block.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayAbility/GA_Hero_Roll.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayAbility/GA_Hero_TargetLock.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/HeroWeapon/BP_GAS_SlashAxe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/HeroWeapon/BP_GAS_SlashAxe.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/Montages/AM_Hero_Roll.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/Montages/AM_Hero_StandingBlock_Idle.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/1/V6/2JQPZEOZY733N7M5DCQ98D.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/7/XY/CO58PKEFD7DTGKVA85RMBX.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/A/02/4UKZCWI2SPW8ZMOYX06B69.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/GAS_SlashGameplayAbility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/GAS_SlashGameplayAbility.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/GAS_SlashGameplayAbility.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/GAS_SlashGameplayAbility.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/EQS/EQSContext_TargetActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/EQS/EQSContext_TargetActor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/AIC_GruntlingGuardian.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_GruntlingGuardian.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_GruntlingGuardian_Weapon.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BT_GruntlingGuardian.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/DA_GruntlingGuardian.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayAbility/GA_GruntlingGuardian_SpawnWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayAbility/GA_GruntlingGuardian_SpawnWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayAbility/Special/GA_Hero_Roll.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayAbility/Special/GA_Hero_Roll.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_MeleeAttack_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_MeleeAttack_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/0/XE/4B6ASGF5P3ACDEXOUZOD79.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/2/MM/E98W3K3VJWF0ZE5HNO7OGV.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/6/FI/6Z6HE7ZC5275H0TLPSZAXQ.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/7/KI/HERFW2VBC92VZTED9A5H0N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/7/KI/HERFW2VBC92VZTED9A5H0N.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/Combat/EnemyCombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/Combat/EnemyCombatComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/SlashFunctionLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/SlashFunctionLibrary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashFunctionLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashFunctionLibrary.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -579,7 +592,16 @@
       <workItem from="1748933866313" duration="8900000" />
       <workItem from="1748957184910" duration="2225000" />
       <workItem from="1748965181830" duration="2895000" />
-      <workItem from="1749021218824" duration="5086000" />
+      <workItem from="1749021218824" duration="5296000" />
+      <workItem from="1749035374485" duration="3825000" />
+      <workItem from="1749050935020" duration="4634000" />
+      <workItem from="1749086117277" duration="4301000" />
+      <workItem from="1749091059493" duration="489000" />
+      <workItem from="1749125306366" duration="1270000" />
+      <workItem from="1749134564221" duration="4353000" />
+      <workItem from="1749143959373" duration="680000" />
+      <workItem from="1749186696793" duration="616000" />
+      <workItem from="1749193082605" duration="5427000" />
     </task>
     <servers />
   </component>

@@ -9,8 +9,6 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "GAS_SlashGameplayTags.h"
 
-#include "SlashDebugHelper.h"
-
 UGAS_SlashAbilitySystemComponent* USlashFunctionLibrary::NativeGetSlashASCFromActor(AActor* InActor)
 {
 	check(InActor);
@@ -137,3 +135,13 @@ bool USlashFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefender)
 	return DotResult < -0.1f;
 }
 
+bool USlashFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(AActor* InInstigator, AActor* InTargetActor,
+	const FGameplayEffectSpecHandle& InSpecHandle)
+{
+	UGAS_SlashAbilitySystemComponent* SourceASC = NativeGetSlashASCFromActor(InInstigator);
+	UGAS_SlashAbilitySystemComponent* TargetASC = NativeGetSlashASCFromActor(InTargetActor);
+
+	FActiveGameplayEffectHandle ActiveGameplayEffectHandle = SourceASC->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
+
+	return ActiveGameplayEffectHandle.WasSuccessfullyApplied();
+}

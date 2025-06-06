@@ -15,7 +15,7 @@ void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 	bool bIsValidBlock = false;
 
 	const bool bIsPlayerBlocking = USlashFunctionLibrary::NativeDoesActorHaveTag(HitActor, GAS_SlashGameplayTags::Player_Status_Blocking);
-	const bool bIsMyAttackUnblockable = false;
+	const bool bIsMyAttackUnblockable = USlashFunctionLibrary::NativeDoesActorHaveTag(GetOwningPawn(), GAS_SlashGameplayTags::Enemy_Status_Unblockable);
 
 	if(bIsPlayerBlocking && !bIsMyAttackUnblockable)
 	{
