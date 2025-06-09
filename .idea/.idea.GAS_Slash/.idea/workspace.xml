@@ -12,33 +12,29 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGameplayTags.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Enemy_Frost_Giant/Materials/CharM_Frost_Giant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Enemy_Frost_Giant/Materials/CharM_Frost_Giant.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/Enemies/Enemy_Frost_Giant/SK_Enemy_FrostGiant_Captain.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Enemies/Enemy_Frost_Giant/SK_Enemy_FrostGiant_Captain.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/BB_Enemy_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/BB_Enemy_Base.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/BP_EnemyCharacter_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/BP_EnemyCharacter_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/AIC_GruntlingGlacer.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_GruntlingGlacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_GruntlingGlacer.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_GruntlingGlacer_Weapon.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/AIC_FrostGiant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/AIC_FrostGiant.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/BP_FrostGiant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/BP_FrostGiant.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/BT_FrostGiant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/BT_FrostGiant.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/DA_FrostGiant.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/DA_FrostGiant.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_Death.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_Death.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_MeleeAttack_1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_MeleeAttack_1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_MeleeAttack_2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_MeleeAttack_2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_MeleeAttack_Combo.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/GameplayAbility/GA_FrostGiant_MeleeAttack_Combo.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/Montages/AM_ExoGame_FrostGiant_Attck_Melee_A.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/Montages/AM_ExoGame_FrostGiant_Attck_Melee_C.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/Montages/AM_ExoGame_FrostGiant_Attck_Melee_Combo.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/FrostGiant/Montages/AM_ExoGame_Troll_React_Death.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_Gruntling_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_Gruntling_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BP_Projectile_GrunlingGlacer.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/BT_GruntlingGlacer.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/DA_GruntlingGlacer.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayAbility/GA_GruntlingGlacer_Projectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayAbility/GA_GruntlingGlacer_Projectile.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayAbility/GA_GruntlingGlacer_SpawnWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayAbility/GA_GruntlingGlacer_SpawnWeapon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BP_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BP_GruntlingGuardian.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GameplayCues/GC_Enemy_AttackWarning.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GameplayCues/GC_Enemy_AttackWarning.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/CT_HeroStats.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/CT_HeroStats.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_MeleeAttack_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_MeleeAttack_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/8/OQ/35R1BLNHFNO0FPCIMFDXO8.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashEnemyCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/Combat/EnemyCombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/Combat/EnemyCombatComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/Combat/PawnCombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/Combat/PawnCombatComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/UI/EnemyUIComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Components/UI/EnemyUIComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashEnemyCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Components/Combat/EnemyCombatComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Components/Combat/EnemyCombatComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Components/Combat/PawnCombatComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Components/Combat/PawnCombatComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Components/UI/EnemyUIComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Components/UI/EnemyUIComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/EnemyWidgets/WBP_DefaultEnemyHealthBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/EnemyWidgets/WBP_DefaultEnemyHealthBar.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/2/13/GWG5BFY45LXYTQEURQJO34.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/2/13/GWG5BFY45LXYTQEURQJO34.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/8/KW/2AVHKDLCVCFITXBOZFD4XP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/8/KW/2AVHKDLCVCFITXBOZFD4XP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -608,7 +604,8 @@
       <workItem from="1749299633389" duration="1833000" />
       <workItem from="1749308185552" duration="3162000" />
       <workItem from="1749394628109" duration="2187000" />
-      <workItem from="1749400306624" duration="706000" />
+      <workItem from="1749400306624" duration="1178000" />
+      <workItem from="1749464710680" duration="9966000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,8 @@ public class GAS_Slash : ModuleRules
 			"AIModule",
 			"AnimGraphRuntime",
 			"MotionWarping",
-			"Niagara"
+			"Niagara",
+			"NavigationSystem"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
