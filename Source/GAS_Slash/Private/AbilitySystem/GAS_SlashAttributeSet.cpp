@@ -47,6 +47,18 @@ void UGAS_SlashAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
 
 		SetCurrentRage(NewCurrentRage);
 
+		if(GetCurrentRage() == GetMaxRage())
+		{
+			USlashFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), GAS_SlashGameplayTags::Player_Status_Rage_Full);
+		} else if (GetCurrentRage() == 0.f)
+		{
+			USlashFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), GAS_SlashGameplayTags::Player_Status_Rage_None);
+		} else
+		{
+			USlashFunctionLibrary::RemoveGameplayTagFromActorIfFound(Data.Target.GetAvatarActor(), GAS_SlashGameplayTags::Player_Status_Rage_Full);
+			USlashFunctionLibrary::RemoveGameplayTagFromActorIfFound(Data.Target.GetAvatarActor(), GAS_SlashGameplayTags::Player_Status_Rage_None);
+		}
+
 		if(UHeroUIComponent* HeroUIComponent = CachedPawnUIInterface->GetHeroUIComponent())
 		{
 			HeroUIComponent->OnCurrentRageChanged.Broadcast(GetCurrentRage() / GetMaxRage());

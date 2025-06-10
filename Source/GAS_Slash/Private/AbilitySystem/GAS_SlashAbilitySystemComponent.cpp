@@ -13,15 +13,9 @@ void UGAS_SlashAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag&
 	{
 		if(!AbilitySpec.GetDynamicSpecSourceTags().HasTagExact(InInputTag)) continue;
 
-		if(InInputTag.MatchesTag(GAS_SlashGameplayTags::InputTag_Toggleable))
+		if(InInputTag.MatchesTag(GAS_SlashGameplayTags::InputTag_Toggleable) && AbilitySpec.IsActive())
 		{
-			if(AbilitySpec.IsActive())
-			{
-				CancelAbilityHandle(AbilitySpec.Handle);
-			} else
-			{
-				TryActivateAbility(AbilitySpec.Handle);
-			}
+			CancelAbilityHandle(AbilitySpec.Handle);
 		} else
 		{
 			TryActivateAbility(AbilitySpec.Handle);
