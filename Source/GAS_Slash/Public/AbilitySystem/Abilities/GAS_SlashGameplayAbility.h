@@ -41,4 +41,7 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Ability", meta = (DisplayName = "Apply Gameplay Effect Spec Handle To Target Actor", ExpandEnumAsExecs = "OutSuccessType"))
 	FActiveGameplayEffectHandle BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& InSpecHandle, ESlashSuccessTypes& OutSuccessType);
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Ability")
+	void ApplyGameplayEffectSpecHandleToHitResults(const FGameplayEffectSpecHandle& InSpecHandle, const TArray<FHitResult>& InHitResults);
 };
