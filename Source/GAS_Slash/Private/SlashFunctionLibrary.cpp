@@ -8,6 +8,7 @@
 #include "GenericTeamAgentInterface.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "GAS_SlashGameplayTags.h"
+#include "SlashTypes/SlashCountDownAction.h"
 
 UGAS_SlashAbilitySystemComponent* USlashFunctionLibrary::NativeGetSlashASCFromActor(AActor* InActor)
 {
@@ -144,4 +145,42 @@ bool USlashFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(AActor* I
 	FActiveGameplayEffectHandle ActiveGameplayEffectHandle = SourceASC->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
 
 	return ActiveGameplayEffectHandle.WasSuccessfullyApplied();
+}
+
+void USlashFunctionLibrary::CountDown(const UObject* WorldContextObject, float TotalTime, float UpdateInterval,
+	float& OutRemainingTime, ESlashCountDownActionInput CountDownInput, ESlashCountDownActionOutput& CountDownOutput,
+	FLatentActionInfo LatentInfo)
+{
+	UWorld* World = nullptr;
+
+	if(GEngine)
+	{
+		World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull);
+	}
+
+	if(!World) return;
+
+	FLatentActionManager& LatentActionManager = World->GetLatentActionManager();
+
+	FSlashCountDownAction* FoundAction = LatentActionManager.FindExistingAction<FSlashCountDownAction>(LatentInfo.CallbackTarget, LatentInfo.UUID);
+
+	if(CountDownInput == ESlashCountDownActionInput::Start)
+	{
+		if(!FoundAction)
+		{
+			LatentActionManager.AddNewAction(
+				LatentInfo.CallbackTarget,
+				LatentInfo.UUID,
+				new FSlashCountDownAction(TotalTime, UpdateInterval, OutRemainingTime, CountDownOutput, LatentInfo)
+			);
+		}
+	}
+
+	if(CountDownInput == ESlashCountDownActionInput::Cancel)
+	{
+		if(FoundAction)
+		{
+			FoundAction->CancelAction();
+		}
+	}
 }

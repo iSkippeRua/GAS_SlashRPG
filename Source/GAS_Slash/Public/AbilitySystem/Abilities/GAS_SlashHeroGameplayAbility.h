@@ -27,6 +27,10 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
 	FGameplayEffectSpecHandle MakeHeroDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float InWeaponBaseDamage, FGameplayTag InCurrentAttackTypeTag, int32 InUsedComboCount);
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Ability")
+	bool GetAbilityRemainingCooldownByTag(FGameplayTag InCooldownTag, float& TotalCooldownTime, float& RemainingCooldownTime);
+	
 	
 private:
 	TWeakObjectPtr<AGAS_SlashHeroCharacter> CachedSlashHeroCharacter;

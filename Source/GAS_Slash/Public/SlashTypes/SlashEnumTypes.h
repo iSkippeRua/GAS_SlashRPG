@@ -20,3 +20,18 @@ enum class ESlashSuccessTypes : uint8
 	Successful,
 	Failed
 };
+
+UENUM()
+enum class ESlashCountDownActionInput : uint8
+{
+	Start,
+	Cancel
+};
+
+UENUM()
+enum class ESlashCountDownActionOutput : uint8
+{
+	Updated,
+	Completed,
+	Canceled
+};
