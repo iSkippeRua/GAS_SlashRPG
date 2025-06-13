@@ -89,6 +89,8 @@ void AGAS_SlashHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Triggered, this, &ThisClass::Input_SwitchTargetTriggered);
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Completed, this, &ThisClass::Input_SwitchTargetCompleted);
 
+	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_PickUp_Stones, ETriggerEvent::Started, this, &ThisClass::Input_PickUpStonesStarted);
+	
 	GAS_SlashInputComponent->BindAbilityInputAction(InputConfigDataAsset, this, &ThisClass::Input_AbilityInputPressed, &ThisClass::Input_AbilityInputReleased);
 }
 
@@ -137,6 +139,17 @@ void AGAS_SlashHeroCharacter::Input_SwitchTargetCompleted(const FInputActionValu
 	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
 		this,
 		SwitchDirection.X > 0.f ? GAS_SlashGameplayTags::Player_Event_SwitchTarget_Right : GAS_SlashGameplayTags::Player_Event_SwitchTarget_Left,
+		Data
+	);
+}
+
+void AGAS_SlashHeroCharacter::Input_PickUpStonesStarted(const FInputActionValue& InputActionValue)
+{
+	FGameplayEventData Data;
+	
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+		this,
+		GAS_SlashGameplayTags::Player_Event_ConsumeStones,
 		Data
 	);
 }

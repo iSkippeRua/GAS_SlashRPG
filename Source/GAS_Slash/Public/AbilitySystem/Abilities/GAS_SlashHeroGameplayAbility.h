@@ -6,6 +6,7 @@
 #include "AbilitySystem/Abilities/GAS_SlashGameplayAbility.h"
 #include "GAS_SlashHeroGameplayAbility.generated.h"
 
+class UHeroUIComponent;
 class AGAS_SlashHeroCharacter;
 class AGAS_SlashHeroController;
 class UHeroCombatComponent;
@@ -24,6 +25,9 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
 	UHeroCombatComponent* GetHeroCombatComponentFromActorInfo();
+
+	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
+	UHeroUIComponent* GetHeroUIComponentFromActorInfo();
 
 	UFUNCTION(BlueprintPure, Category = "GAS_Slash|Ability")
 	FGameplayEffectSpecHandle MakeHeroDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float InWeaponBaseDamage, FGameplayTag InCurrentAttackTypeTag, int32 InUsedComboCount);

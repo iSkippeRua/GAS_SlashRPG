@@ -31,6 +31,11 @@ UHeroCombatComponent* UGAS_SlashHeroGameplayAbility::GetHeroCombatComponentFromA
 	return GetHeroCharacterFromActorInfo()->GetHeroCombatComponent();
 }
 
+UHeroUIComponent* UGAS_SlashHeroGameplayAbility::GetHeroUIComponentFromActorInfo()
+{
+	return GetHeroCharacterFromActorInfo()->GetHeroUIComponent();
+}
+
 FGameplayEffectSpecHandle UGAS_SlashHeroGameplayAbility::MakeHeroDamageEffectSpecHandle(
 	TSubclassOf<UGameplayEffect> EffectClass, float InWeaponBaseDamage, FGameplayTag InCurrentAttackTypeTag,
 	int32 InUsedComboCount)
