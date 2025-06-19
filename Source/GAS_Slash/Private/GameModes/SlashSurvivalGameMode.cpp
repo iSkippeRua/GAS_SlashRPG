@@ -7,6 +7,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Engine/TargetPoint.h"
 #include "NavigationSystem.h"
+#include "SlashFunctionLibrary.h"
 
 void ASlashSurvivalGameMode::BeginPlay()
 {
@@ -70,6 +71,18 @@ void ASlashSurvivalGameMode::Tick(float DeltaSeconds)
 				PreLoadNextWaveEnemies();
 			}
 		}
+	}
+}
+
+void ASlashSurvivalGameMode::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
+{
+	Super::InitGame(MapName, Options, ErrorMessage);
+
+	ESlashGameDifficulty SavedGameDifficulty;
+	
+	if(USlashFunctionLibrary::TryLoadSavedGameDifficulty(SavedGameDifficulty))
+	{
+		CurrentGameDifficulty = SavedGameDifficulty;
 	}
 }
 

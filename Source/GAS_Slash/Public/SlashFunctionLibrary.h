@@ -8,6 +8,7 @@
 #include "SlashTypes/SlashEnumTypes.h"
 #include "SlashFunctionLibrary.generated.h"
 
+class USlashGameInstance;
 struct FGameplayEffectSpecHandle;
 class UPawnCombatComponent;
 struct FGameplayTag;
@@ -55,4 +56,17 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|FunctionLibrary", meta = (Latent, WorldContext = "WorldContextObject", LatentInfo = "LatentInfo", ExpandEnumAsExecs = "CountDownInput|CountDownOutput", TotalTime = "1.0", UpdateInterval = "0.1"))
 	static void CountDown(const UObject* WorldContextObject, float TotalTime, float UpdateInterval, float& OutRemainingTime, ESlashCountDownActionInput CountDownInput, ESlashCountDownActionOutput& CountDownOutput, FLatentActionInfo LatentInfo);
+
+	UFUNCTION(BlueprintPure, Category = "GAS_Slash|FunctionLibrary", meta = (WorldContext = "WorldContextObject"))
+	static USlashGameInstance* GetSlashGameInstance(const UObject* WorldContextObject);
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|FunctionLibrary", meta = (WorldContext = "WorldContextObject"))
+	static void ToggleInputMode(const UObject* WorldContextObject, ESlashInputMode InInputMode);
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|FunctionLibrary")
+	static void SaveCurrentGameDifficulty(ESlashGameDifficulty InDifficultyToSave);
+
+	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|FunctionLibrary")
+	static bool TryLoadSavedGameDifficulty(ESlashGameDifficulty& OutSavedDifficulty);
+	
 };

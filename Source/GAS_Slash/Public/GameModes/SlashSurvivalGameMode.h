@@ -56,6 +56,7 @@ class GAS_SLASH_API ASlashSurvivalGameMode : public AGAS_SlashBaseGamemode
 protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
+	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 
 private:
 	void SetCurrentSurvivalGameModeState(ESlashSurvivalGameModeState InState);

@@ -12,11 +12,26 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BT_GruntlingGlacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BT_GruntlingGlacer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Sounds/Music/Dungeons_EndBossBattle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Sounds/Music/Dungeons_EndBossBattle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/Sounds/Music/Ice_BossBattle01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/Sounds/Music/Ice_BossBattle01.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BP_Projectile_GrunlingGlacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BP_Projectile_GrunlingGlacer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BT_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BT_GruntlingGuardian.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GameModes/BP_SlashSurvivalGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GameModes/BP_SlashSurvivalGameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GameModes/DT_EnemyWaveSpawner.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GameModes/DT_EnemyWaveSpawner.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/D/JQ/RDG3GL6C7JYTWFZXT2XEUO.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GameModes/GAS_SlashBaseGamemode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GameModes/GAS_SlashBaseGamemode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GameModes/GAS_SlashBaseGamemode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GameModes/GAS_SlashBaseGamemode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_Static.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_Static.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/Input/IMC_Default.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/7/KI/HERFW2VBC92VZTED9A5H0N.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GameModes/SlashSurvivalGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GameModes/SlashSurvivalGameMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/SlashFunctionLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/SlashFunctionLibrary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GameModes/SlashSurvivalGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GameModes/SlashSurvivalGameMode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashFunctionLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashFunctionLibrary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashTypes/SlashEnumTypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashTypes/SlashEnumTypes.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -600,6 +615,8 @@
       <workItem from="1750170299498" duration="1065000" />
       <workItem from="1750258062011" duration="1490000" />
       <workItem from="1750261597852" duration="627000" />
+      <workItem from="1750323413910" duration="16724000" />
+      <workItem from="1750357637701" duration="2717000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,9 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "GAS_SlashGameplayTags.h"
 #include "SlashTypes/SlashCountDownAction.h"
+#include "SlashGameInstance.h"
+#include "Kismet/GameplayStatics.h"
+#include "SaveGame/SlashSaveGame.h"
 
 UGAS_SlashAbilitySystemComponent* USlashFunctionLibrary::NativeGetSlashASCFromActor(AActor* InActor)
 {
@@ -183,4 +186,80 @@ void USlashFunctionLibrary::CountDown(const UObject* WorldContextObject, float T
 			FoundAction->CancelAction();
 		}
 	}
+}
+
+USlashGameInstance* USlashFunctionLibrary::GetSlashGameInstance(const UObject* WorldContextObject)
+{
+	if(GEngine)
+	{
+		if(UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
+		{
+			return World->GetGameInstance<USlashGameInstance>();
+		}
+	}
+
+	return nullptr;
+}
+
+void USlashFunctionLibrary::ToggleInputMode(const UObject* WorldContextObject, ESlashInputMode InInputMode)
+{
+	APlayerController* PlayerController = nullptr;
+
+	if(GEngine)
+	{
+		if(UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
+		{
+			PlayerController = World->GetFirstPlayerController();
+		}
+	}
+
+	if(!PlayerController) return;
+
+	FInputModeGameOnly GameOnlyMode;
+	FInputModeUIOnly UIOnlyMode;
+	
+	switch(InInputMode)
+	{
+	case ESlashInputMode::GameOnly:
+		PlayerController->SetInputMode(GameOnlyMode);
+		PlayerController->bShowMouseCursor = false;
+		break;
+		
+	case ESlashInputMode::UIOnly:
+		PlayerController->SetInputMode(UIOnlyMode);
+		PlayerController->bShowMouseCursor = true;
+		break;
+		
+	default:
+		break;
+	}
+}
+
+void USlashFunctionLibrary::SaveCurrentGameDifficulty(ESlashGameDifficulty InDifficultyToSave)
+{
+	USaveGame* SaveGameObject = UGameplayStatics::CreateSaveGameObject(USlashSaveGame::StaticClass());
+
+	if(USlashSaveGame* SlashSavedGameObject = Cast<USlashSaveGame>(SaveGameObject))
+	{
+		SlashSavedGameObject->SavedCurrentGameDifficulty = InDifficultyToSave;
+
+		const bool bWasSaved = UGameplayStatics::SaveGameToSlot(SlashSavedGameObject, GAS_SlashGameplayTags::GameData_SaveGame_Slot_1.GetTag().ToString(), 0);
+	}
+		
+}
+
+bool USlashFunctionLibrary::TryLoadSavedGameDifficulty(ESlashGameDifficulty& OutSavedDifficulty)
+{
+	if(UGameplayStatics::DoesSaveGameExist(GAS_SlashGameplayTags::GameData_SaveGame_Slot_1.GetTag().ToString(), 0))
+	{
+		USaveGame* SaveGameObject = UGameplayStatics::LoadGameFromSlot(GAS_SlashGameplayTags::GameData_SaveGame_Slot_1.GetTag().ToString(), 0);
+
+		if(USlashSaveGame* SlashSavedGameObject = Cast<USlashSaveGame>(SaveGameObject))
+		{
+			OutSavedDifficulty = SlashSavedGameObject->SavedCurrentGameDifficulty;
+			return true;
+		}
+	}
+
+	return false;
 }

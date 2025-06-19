@@ -97,4 +97,11 @@ namespace GAS_SlashGameplayTags
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_HitReact_Right);
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_HitReact_Back);
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Status_Invincible);
+
+	/*--- Game Data Tags ---*/
+	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(GameData_Level_SurvivalGameModeMap);
+	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(GameData_Level_MainMenuMap);
+	
+	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(GameData_SaveGame_Slot_1);
+	
 }

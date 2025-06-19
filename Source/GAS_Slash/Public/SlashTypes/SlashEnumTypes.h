@@ -44,3 +44,10 @@ enum class ESlashGameDifficulty : uint8
 	Hard,
 	Hardcore
 };
+
+UENUM(BlueprintType)
+enum class ESlashInputMode : uint8
+{
+	GameOnly,
+	UIOnly
+};
