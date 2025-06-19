@@ -15,6 +15,7 @@
 #include "Components/Combat/HeroCombatComponent.h"
 #include "Components/UI/HeroUIComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "GameModes/GAS_SlashBaseGamemode.h"
 
 AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
 {
@@ -67,7 +68,30 @@ void AGAS_SlashHeroCharacter::PossessedBy(AController* NewController)
 	{
 		if(UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.LoadSynchronous())
 		{
-			LoadedData->GiveToAbilitySystemComponent(SlashAbilitySystemComponent);
+			int32 AbilityApplyLevel = 1;
+
+			if(AGAS_SlashBaseGamemode* BaseGameMode = GetWorld()->GetAuthGameMode<AGAS_SlashBaseGamemode>())
+			{
+				switch(BaseGameMode->GetCurrentGameDifficulty())
+				{
+				case ESlashGameDifficulty::Easy:
+					AbilityApplyLevel = 4;
+					break;
+				case ESlashGameDifficulty::Normal:
+					AbilityApplyLevel = 3;
+					break;
+				case ESlashGameDifficulty::Hard:
+					AbilityApplyLevel = 2;
+					break;
+				case ESlashGameDifficulty::Hardcore:
+					AbilityApplyLevel = 1;
+					break;
+				default:
+					break;
+				}
+			}
+			
+			LoadedData->GiveToAbilitySystemComponent(SlashAbilitySystemComponent, AbilityApplyLevel);
 		}
 	};
 }

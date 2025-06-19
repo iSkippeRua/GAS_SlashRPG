@@ -13,6 +13,7 @@
 #include "SlashFunctionLibrary.h"
 
 #include "DataAssets/StartUpData/DataAsset_EnemyStartUpData.h"
+#include "GameModes/GAS_SlashBaseGamemode.h"
 
 AGAS_SlashEnemyCharacter::AGAS_SlashEnemyCharacter()
 {
@@ -112,14 +113,37 @@ void AGAS_SlashEnemyCharacter::InitEnemyStartUpData()
 {
 	if(CharacterStartUpData.IsNull()) return;
 
+	int32 AbilityApplyLevel = 1;
+
+	if(AGAS_SlashBaseGamemode* BaseGameMode = GetWorld()->GetAuthGameMode<AGAS_SlashBaseGamemode>())
+	{
+		switch(BaseGameMode->GetCurrentGameDifficulty())
+		{
+		case ESlashGameDifficulty::Easy:
+			AbilityApplyLevel = 1;
+			break;
+		case ESlashGameDifficulty::Normal:
+			AbilityApplyLevel = 2;
+			break;
+		case ESlashGameDifficulty::Hard:
+			AbilityApplyLevel = 3;
+			break;
+		case ESlashGameDifficulty::Hardcore:
+			AbilityApplyLevel = 4;
+			break;
+		default:
+			break;
+		}
+	}
+	
 	UAssetManager::GetStreamableManager().RequestAsyncLoad(
 		CharacterStartUpData.ToSoftObjectPath(),
 		FStreamableDelegate::CreateLambda(
-			[this]()
+			[this, AbilityApplyLevel]()
 			{
 				if(UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.Get())
 				{
-					LoadedData->GiveToAbilitySystemComponent(SlashAbilitySystemComponent);
+					LoadedData->GiveToAbilitySystemComponent(SlashAbilitySystemComponent, AbilityApplyLevel);
 				}
 			}
 		)

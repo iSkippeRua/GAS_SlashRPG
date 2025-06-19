@@ -35,3 +35,12 @@ enum class ESlashCountDownActionOutput : uint8
 	Completed,
 	Canceled
 };
+
+UENUM(BlueprintType)
+enum class ESlashGameDifficulty : uint8
+{
+	Easy,
+	Normal,
+	Hard,
+	Hardcore
+};
