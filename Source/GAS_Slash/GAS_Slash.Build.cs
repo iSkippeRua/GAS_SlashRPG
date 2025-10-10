@@ -22,10 +22,11 @@ public class GAS_Slash : ModuleRules
 			"MotionWarping",
 			"Niagara",
 			"NavigationSystem",
-			"MoviePlayer"
+			"MoviePlayer",
+			"InventorySystemPlugin"
 		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+		PrivateDependencyModuleNames.AddRange(new string[] { "InventorySystemPlugin" });
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
