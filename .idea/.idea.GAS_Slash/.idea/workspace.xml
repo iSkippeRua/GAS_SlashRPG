@@ -14,22 +14,11 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_CharM_Barbarous.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_CharM_Barbarous.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GameModes/BP_GAS_SlashBaseGamemode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GameModes/BP_GAS_SlashBaseGamemode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/InventoryAssets/ThorneCharacter/Cloak/ABP_Cloak.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/InventoryAssets/ThorneCharacter/Cloak/ABP_Cloak.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/InventoryAssets/ThorneCharacter/Cloak/SKM_Cloak.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/InventoryAssets/ThorneCharacter/Cloak/SKM_Cloak.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/InventoryAssets/ThorneCharacter/Cloak/SK_Cloak.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/InventoryAssets/ThorneCharacter/Cloak/SK_Cloak.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Input/IMC_Default.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/BP_Inv_EquipActor_Cloak_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/BP_Inv_EquipActor_Cloak_Red.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Player/BP_Inv_PlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Player/BP_Inv_PlayerController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/GAS_SlashHeroController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/GAS_SlashHeroController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Generic/BP_SlashGameInstance.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Generic/BP_SlashGameInstance.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SICKA_DYNASTY/Maps/MAP_Demo.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SICKA_DYNASTY/Maps/MAP_Demo.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/GameModeWidgets/WBP_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/GameModeWidgets/WBP_MainMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/E/BW/ES7VI71HUYLR9BHTQYPSE3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/E/BW/ES7VI71HUYLR9BHTQYPSE3.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,15 +44,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Runtime/MassGameplay/Source/MassEQS/Private/Items/EnvQueryItemType_MassEntityHandle.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Editor/LevelEditor/Private/LevelEditorSubsystem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Items/EnvQueryItemType_Point.h" root0="FORCE_HIGHLIGHTING" />
@@ -700,6 +681,12 @@
       <workItem from="1759979941461" duration="1749000" />
       <workItem from="1760126845987" duration="7011000" />
       <workItem from="1760139033554" duration="10161000" />
+      <workItem from="1760317461348" duration="1250000" />
+      <workItem from="1760378157504" duration="863000" />
+      <workItem from="1760382021976" duration="2445000" />
+      <workItem from="1760390272076" duration="4205000" />
+      <workItem from="1760407085909" duration="883000" />
+      <workItem from="1760415657720" duration="3197000" />
     </task>
     <servers />
   </component>
