@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "Components/ActorComponent.h"
 #include "InventoryManagement/FastArray/Inv_FastArray.h"
 #include "Types/Inv_GridTypes.h"
@@ -17,6 +18,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FNoRoomInInventory);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnStackChange, const FInv_SlotAvailabilityResult&, Result);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FItemEquipStatusChanged, UInv_InventoryItem*, Item);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInventoryMenuToggled, bool, bOpen);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnItemConsumed, FGameplayTag, ConsumedItemTag);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), Blueprintable)
 class INVENTORYSYSTEMPLUGIN_API UInv_InventoryComponent : public UActorComponent
@@ -66,6 +68,7 @@ public:
 	FItemEquipStatusChanged OnItemEquipped;
 	FItemEquipStatusChanged OnItemUnequipped;
 	FInventoryMenuToggled OnInventoryMenuToggled;
+	FOnItemConsumed OnItemConsumed;
 
 protected:
 	virtual void BeginPlay() override;

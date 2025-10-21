@@ -6,7 +6,6 @@
 #include "GameFramework/PlayerController.h"
 #include "GenericTeamAgentInterface.h"
 #include "Player/Inv_PlayerController.h"
-// Add include
 #include "EquipmentManagment/Components/Inv_EquipmentComponent.h"
 #include "GAS_SlashHeroController.generated.h"
 
@@ -25,10 +24,16 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;
     virtual void OnPossess(APawn* InPawn) override;
+
+	UFUNCTION()
+	void HandleItemConsumed(FGameplayTag ConsumedItemTag);
     
 private:
 	FGenericTeamId HeroTeamID;
     
     UPROPERTY(VisibleAnywhere)
     UInv_EquipmentComponent* EquipmentComponent;
+
+	UPROPERTY()
+	UInv_InventoryComponent* InventoryComponent;
 };

@@ -138,10 +138,14 @@ void UInv_InventoryComponent::Server_ConsumeItem_Implementation(UInv_InventoryIt
 	{
 		Item->SetTotalStackCount(NewStackCount);
 	}
-
+	
 	if (FInv_ConsumableFragment* ConsumableFragment = Item->GetItemManifestMutable().GetFragmentOfTypeMutable<FInv_ConsumableFragment>())
 	{
 		ConsumableFragment->OnConsume(OwningController.Get());
+
+		UE_LOG(LogTemp, Warning, TEXT("Broadcasting the Inventory Item to the Controller"));
+		
+		OnItemConsumed.Broadcast(Item->GetItemManifestMutable().GetItemType());
 	}
 }
 
