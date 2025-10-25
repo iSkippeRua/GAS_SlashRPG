@@ -18,6 +18,6 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void ConsumeItem();
 	
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<UGameplayEffect> HealingGameplayEffectClass;
+	UPROPERTY(EditDefaultsOnly, Category = "SlashConsumeItem")
+	TMap<FGameplayTag, TSubclassOf<UGameplayEffect>> ItemEffectMap;
 };

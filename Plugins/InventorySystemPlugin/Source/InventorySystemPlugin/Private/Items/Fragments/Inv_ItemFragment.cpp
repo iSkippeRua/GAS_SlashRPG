@@ -113,15 +113,11 @@ void FInv_ConsumableFragment::Manifest()
 
 void FInv_HealthPotionFragment::OnConsume(APlayerController* PlayerController)
 {
-	// TODO: Implement Character Healing in GAS_Slash
-
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Health Potion consumed! Healing by: %f"), GetValue()));
 }
 
 void FInv_ManaPotionFragment::OnConsume(APlayerController* PlayerController)
 {
-	// TODO: Implement Rage/Mana Heal in GAS_Slash
-
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Mana Potion consumed! Healing by: %f"), GetValue()));
 }
 

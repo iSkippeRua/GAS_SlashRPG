@@ -24,4 +24,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "GAS_Slash|Ability")
 	bool TryActivateAbilityByTag(FGameplayTag AbilityTagToActivate);
+
+	void SetLastConsumedItemTag(const FGameplayTag& Tag) { LastConsumedItemTag = Tag; }
+	FGameplayTag GetLastConsumedItemTag() const { return LastConsumedItemTag; }
+	
+private:
+	FGameplayTag LastConsumedItemTag;
 };

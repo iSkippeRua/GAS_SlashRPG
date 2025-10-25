@@ -52,6 +52,7 @@ void AGAS_SlashHeroController::HandleItemConsumed(FGameplayTag ConsumedItemTag)
     
     if(AGAS_SlashHeroCharacter* OwningHeroCharacter = Cast<AGAS_SlashHeroCharacter>(GetCharacter()))
     {
+        OwningHeroCharacter->GetSlashAbilitySystemComponent()->SetLastConsumedItemTag(ConsumedItemTag);
         OwningHeroCharacter->GetSlashAbilitySystemComponent()->TryActivateAbilityByTag(GAS_SlashGameplayTags::Player_Ability_ConsumeItem);
     }
 }
