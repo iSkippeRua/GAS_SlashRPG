@@ -14,18 +14,24 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayEffect/CT_GruntlingGuardianStats.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/GameplayEffect/CT_GruntlingGuardianStats.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayAbility/GA_Hero_ConsumeItem.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayAbility/GA_Hero_ConsumeItem.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_Static.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_Static.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_SpawnStone_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_SpawnStone_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/3/GR/USW8C7DHBL5DIE7HTG2W8E.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/0/UI/OEFSJYF4Z6QS44FKGZCA3I.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/5/SA/H0BPH2YEM571ZDK39HOE9M.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/7/EJ/6XJY0C8R48XPF6L64PVD59.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/D/DY/3UUMRIXX88QHQ0ZLMLYKKQ.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/E/BW/ES7VI71HUYLR9BHTQYPSE3.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeHealPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeHealPotion.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeManaPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeManaPotion.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallHealPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallHealPotion.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallManaPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallManaPotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Items/Fragments/Inv_ItemFragment.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Items/Fragments/Inv_ItemFragment.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_ConsumeItem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_ConsumeItem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/HeroGameplayAbility_ConsumeItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/HeroGameplayAbility_ConsumeItem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/GAS_SlashAbilitySystemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/GAS_SlashAbilitySystemComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/BP_Inv_EquipActor_Cloak_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/BP_Inv_EquipActor_Cloak_Red.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_ItemDescription.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_ItemDescription.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_PrimaryStat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_PrimaryStat.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_StatMod.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_StatMod.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +59,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Experimental/EditorDataStorageFeatures/Source/TedsAssetData/Private/CB/TagsMetadataCache.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Experimental/EditorDataStorageFeatures/Source/TedsAssetData/Private/CB/TagsMetadataCache.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/LeaderboardFlushCallbackProxy.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Runtime/MassGameplay/Source/MassEQS/Private/Items/EnvQueryItemType_MassEntityHandle.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Developer/TraceInsights/Private/Insights/TimingProfiler/ViewModels/CounterAggregator.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Developer/TraceInsights/Private/Insights/TimingProfiler/ViewModels/StatsNode.h" root0="FORCE_HIGHLIGHTING" />
@@ -725,7 +732,9 @@
       <workItem from="1761250775808" duration="2922000" />
       <workItem from="1761349089904" duration="1629000" />
       <workItem from="1761413751435" duration="2288000" />
-      <workItem from="1761428320783" duration="686000" />
+      <workItem from="1761428320783" duration="5158000" />
+      <workItem from="1761438294641" duration="5933000" />
+      <workItem from="1761507307520" duration="1805000" />
     </task>
     <servers />
   </component>
