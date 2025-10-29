@@ -218,6 +218,27 @@ struct FInv_StrengthModifier : public FInv_EquipModifier
 };
 
 USTRUCT(BlueprintType)
+struct FInv_MaxHealthModifier : public FInv_EquipModifier
+{
+	GENERATED_BODY()
+	
+};
+
+USTRUCT(BlueprintType)
+struct FInv_AttackPowerModifier : public FInv_EquipModifier
+{
+	GENERATED_BODY()
+	
+};
+
+USTRUCT(BlueprintType)
+struct FInv_DefencePowerModifier : public FInv_EquipModifier
+{
+	GENERATED_BODY()
+	
+};
+
+USTRUCT(BlueprintType)
 struct FInv_EquipmentFragment : public FInv_InventoryItemFragment
 {
 	GENERATED_BODY()

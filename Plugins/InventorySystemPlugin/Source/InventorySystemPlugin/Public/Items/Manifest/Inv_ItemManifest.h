@@ -22,6 +22,7 @@ struct INVENTORYSYSTEMPLUGIN_API FInv_ItemManifest
 	
 	EInv_ItemCategory GetItemCategory() const { return ItemCategory; }
 	FGameplayTag GetItemType() const { return ItemType; }
+	FGameplayTag GetSlotType() const { return SlotType; }
 
 	void AssimilateInventoryFragments(UInv_CompositeBase* Composite) const;
 
@@ -50,6 +51,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Inventory")
 	FGameplayTag ItemType;
+
+	UPROPERTY(EditAnywhere, Category = "Inventory")
+	FGameplayTag SlotType;
 
 	UPROPERTY(EditAnywhere, Category = "Inventory")
 	TSubclassOf<AActor> PickUpActorClass;

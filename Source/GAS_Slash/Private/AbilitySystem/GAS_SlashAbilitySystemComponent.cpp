@@ -103,3 +103,63 @@ bool UGAS_SlashAbilitySystemComponent::TryActivateAbilityByTag(FGameplayTag Abil
 
 	return false;
 }
+
+void UGAS_SlashAbilitySystemComponent::SetActiveEffectForSlot(const FGameplayTag& SlotTag, const FActiveGameplayEffectHandle& Handle, TSubclassOf<UGameplayEffect> EffectClass, const FGameplayTag& ItemTag)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Setting active effect - Slot: %s, Item: %s"), *SlotTag.ToString(), *ItemTag.ToString());
+	
+	FSlotEffectInfo& SlotInfo = SlotToEffectMap.FindOrAdd(SlotTag);
+	SlotInfo.EffectHandle = Handle;
+	SlotInfo.EffectClass = EffectClass;
+	SlotInfo.ItemTag = ItemTag;
+
+	if (const FSlotEffectInfo* VerifyInfo = SlotToEffectMap.Find(SlotTag))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Successfully stored effect for slot %s"), *SlotTag.ToString());
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Effect wasn't stored successfully for slot %s"), *SlotTag.ToString());
+	}
+}
+
+bool UGAS_SlashAbilitySystemComponent::RemoveActiveEffectForSlot(const FGameplayTag& SlotTag)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Attempting to remove effect for slot: %s"), *SlotTag.ToString());
+	
+	if (FSlotEffectInfo* SlotInfo = SlotToEffectMap.Find(SlotTag))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Found slot info for slot %s"), *SlotTag.ToString());
+
+		if (SlotInfo->EffectHandle.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Found valid effect handle, removing effect"));
+
+			RemoveActiveGameplayEffect(SlotInfo->EffectHandle);
+
+			if (SlotInfo->EffectClass)
+			{
+				RemoveActiveGameplayEffectBySourceEffect(SlotInfo->EffectClass, this, -1);
+			}
+
+			SlotToEffectMap.Remove(SlotTag);
+			return true;
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Effect handle was invalid"));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No slot info found in map"));
+	}
+
+	
+	return false;
+}
+
+const FSlotEffectInfo* UGAS_SlashAbilitySystemComponent::GetSlotEffectInfo(const FGameplayTag& SlotTag) const
+{
+	return SlotToEffectMap.Find(SlotTag);
+}

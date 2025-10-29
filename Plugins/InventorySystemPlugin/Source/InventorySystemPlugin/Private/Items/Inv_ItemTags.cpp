@@ -13,11 +13,15 @@ namespace GameItems
 		namespace Cloaks
 		{
 			UE_DEFINE_GAMEPLAY_TAG(RedCloak, "GameItems.Equipment.Cloaks.RedCloak")
+			UE_DEFINE_GAMEPLAY_TAG(GreenCloak, "GameItems.Equipment.Cloaks.GreenCloak")
+			UE_DEFINE_GAMEPLAY_TAG(YellowCloak, "GameItems.Equipment.Cloaks.YellowCloak")
 		}
         
 		namespace Masks
 		{
 			UE_DEFINE_GAMEPLAY_TAG(SteelMask, "GameItems.Equipment.Masks.SteelMask")
+			UE_DEFINE_GAMEPLAY_TAG(GreenMask, "GameItems.Equipment.Masks.GreenMask")
+			UE_DEFINE_GAMEPLAY_TAG(YellowMask, "GameItems.Equipment.Masks.YellowMask")
 		}
 	}
 

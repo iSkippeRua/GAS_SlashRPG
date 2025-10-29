@@ -27,6 +27,14 @@ void AGAS_SlashHeroController::OnPossess(APawn* InPawn)
         {
             EquipmentComponent->SetOwningSkeletalMesh(OwningCharacter->GetMesh());
             EquipmentComponent->InitializeOwner(this);
+
+            EquipmentComponent->OnItemEquippedSignal.AddUniqueDynamic(this, &ThisClass::HandleItemEquipped);
+
+            UE_LOG(LogTemp, Warning, TEXT("Successfully subscribed to the OnItemEquipped"));
+
+            EquipmentComponent->OnItemUnequippedSignal.AddUniqueDynamic(this, &ThisClass::HandleItemUnequipped);
+
+            UE_LOG(LogTemp, Warning, TEXT("Successfully subscribed to the OnItemUnequipped"));
         }
 
         InventoryComponent = FindComponentByClass<UInv_InventoryComponent>();
@@ -54,6 +62,36 @@ void AGAS_SlashHeroController::HandleItemConsumed(FGameplayTag ConsumedItemTag)
     {
         OwningHeroCharacter->GetSlashAbilitySystemComponent()->SetLastConsumedItemTag(ConsumedItemTag);
         OwningHeroCharacter->GetSlashAbilitySystemComponent()->TryActivateAbilityByTag(GAS_SlashGameplayTags::Player_Ability_ConsumeItem);
+    }
+}
+
+void AGAS_SlashHeroController::HandleItemEquipped(FGameplayTag EquippedItemType, FGameplayTag EquippedItemSlot)
+{
+    UE_LOG(LogTemp, Warning, TEXT("HandleItemEquipped called with tag: %s"), *EquippedItemType.ToString());
+
+    if(AGAS_SlashHeroCharacter* OwningHeroCharacter = Cast<AGAS_SlashHeroCharacter>(GetCharacter()))
+    {
+        OwningHeroCharacter->GetSlashAbilitySystemComponent()->SetEquipItemData(
+            EquippedItemType,
+            EquippedItemSlot,
+            true
+        );
+        OwningHeroCharacter->GetSlashAbilitySystemComponent()->TryActivateAbilityByTag(GAS_SlashGameplayTags::Player_Ability_EquipItem);
+    }
+}
+
+void AGAS_SlashHeroController::HandleItemUnequipped(FGameplayTag UnequippedItemType, FGameplayTag UnequippedItemSlot)
+{
+    UE_LOG(LogTemp, Warning, TEXT("HandleItemUnequipped called with tag: %s"), *UnequippedItemType.ToString());
+
+    if(AGAS_SlashHeroCharacter* OwningHeroCharacter = Cast<AGAS_SlashHeroCharacter>(GetCharacter()))
+    {
+        OwningHeroCharacter->GetSlashAbilitySystemComponent()->SetEquipItemData(
+            UnequippedItemType,
+            UnequippedItemSlot,
+            false
+        );
+        OwningHeroCharacter->GetSlashAbilitySystemComponent()->TryActivateAbilityByTag(GAS_SlashGameplayTags::Player_Ability_EquipItem);
     }
 }
 

@@ -27,7 +27,21 @@ public:
 
 	void SetLastConsumedItemTag(const FGameplayTag& Tag) { LastConsumedItemTag = Tag; }
 	FGameplayTag GetLastConsumedItemTag() const { return LastConsumedItemTag; }
-	
+
+	void SetEquipItemData(const FGameplayTag& ItemTag, const FGameplayTag& SlotTag, bool bIsEquipping)
+	{
+		CurrentEquipData.ItemTag = ItemTag;
+		CurrentEquipData.SlotTag = SlotTag;
+		CurrentEquipData.bIsEquipping = bIsEquipping;
+	}
+	FEquipItemData GetEquipItemData() const { return CurrentEquipData; }
+	void SetActiveEffectForSlot(const FGameplayTag& SlotTag, const FActiveGameplayEffectHandle& Handle, TSubclassOf<UGameplayEffect> EffectClass, const FGameplayTag& ItemTag);
+	bool RemoveActiveEffectForSlot(const FGameplayTag& SlotTag);
+	const FSlotEffectInfo* GetSlotEffectInfo(const FGameplayTag& SlotTag) const;
+
 private:
 	FGameplayTag LastConsumedItemTag;
+	
+	FEquipItemData CurrentEquipData;
+	TMap<FGameplayTag, FSlotEffectInfo> SlotToEffectMap;
 };

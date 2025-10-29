@@ -41,6 +41,7 @@ namespace GAS_SlashGameplayTags
 	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_SpecialWeaponAbility_Heavy, "Player.Ability.SpecialWeaponAbility.Heavy");
 	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_PickUp_Stones, "Player.Ability.PickUp.Stones");
 	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_ConsumeItem, "Player.Ability.ConsumeItem");
+	UE_DEFINE_GAMEPLAY_TAG(Player_Ability_EquipItem, "Player.Ability.EquipItem");
 	/* <Ability Block End> */
 	
 	UE_DEFINE_GAMEPLAY_TAG(Player_Weapon_Axe, "Player.Weapon.Axe");

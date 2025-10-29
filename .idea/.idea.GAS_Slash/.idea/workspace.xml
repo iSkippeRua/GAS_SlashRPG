@@ -14,24 +14,27 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_Static.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_Static.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/0/UI/OEFSJYF4Z6QS44FKGZCA3I.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/5/SA/H0BPH2YEM571ZDK39HOE9M.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/7/EJ/6XJY0C8R48XPF6L64PVD59.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/D/DY/3UUMRIXX88QHQ0ZLMLYKKQ.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/E/BW/ES7VI71HUYLR9BHTQYPSE3.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeHealPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeHealPotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeManaPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeManaPotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallHealPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallHealPotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallManaPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallManaPotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/BP_Inv_EquipActor_Cloak_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/BP_Inv_EquipActor_Cloak_Red.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/DA_Hero.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/DA_Hero.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_SpawnStone_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_SpawnStone_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/4/03/0W47QVRAPIHOG7N9X18IML.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Maps/DevMap/A/HQ/GVSWBLLM75WHXSHUD0EBUW.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/BP_Inv_EquipActor_Mask_Steel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/BP_Inv_EquipActor_Mask_Steel.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Steel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Steel.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_ItemDescription.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_ItemDescription.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_PrimaryStat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_PrimaryStat.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_StatMod.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Widgets/Inventory/ItemDescription/WBP_Inv_LabeledValue_StatMod.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/EquipmentManagment/Components/Inv_EquipmentComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/EquipmentManagment/Components/Inv_EquipmentComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Items/Inv_ItemTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Items/Inv_ItemTags.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/EquipmentManagment/Components/Inv_EquipmentComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/EquipmentManagment/Components/Inv_EquipmentComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Fragments/Inv_ItemFragment.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Fragments/Inv_ItemFragment.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Inv_ItemTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Inv_ItemTags.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Manifest/Inv_ItemManifest.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Manifest/Inv_ItemManifest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/GAS_SlashAbilitySystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/GAS_SlashAbilitySystemComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/GAS_SlashAbilitySystemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/GAS_SlashAbilitySystemComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/GAS_SlashHeroController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/GAS_SlashHeroController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashTypes/SlashStructTypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/SlashTypes/SlashStructTypes.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +60,27 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Experimental/EditorDataStorageFeatures/Source/TedsAssetData/Private/CB/TagsMetadataCache.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Experimental/EditorDataStorageFeatures/Source/TedsAssetData/Private/CB/TagsMetadataCache.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Plugins/Online/OnlineSubsystemUtils/Source/OnlineSubsystemUtils/Classes/LeaderboardFlushCallbackProxy.h" root0="SKIP_HIGHLIGHTING" />
@@ -64,10 +88,15 @@
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Developer/TraceInsights/Private/Insights/TimingProfiler/ViewModels/CounterAggregator.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Developer/TraceInsights/Private/Insights/TimingProfiler/ViewModels/StatsNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Editor/AssetTagsEditor/AssetTagsEditor.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Editor/Documentation/Private/UDNParser.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Editor/LevelEditor/Private/LevelEditorSubsystem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Editor/MovieSceneTools/Public/SObjectBindingTag.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Editor/UnrealEd/Private/Commandlets/DiffCookCommandlet.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Programs/AutomationTool/AutomationUtils/CommandEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Programs/AutomationTool/AutomationUtils/StagedFileSystemReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Programs/AutomationTool/AutomationUtils/WindowsHostPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/AIModule/Classes/EnvironmentQuery/Items/EnvQueryItemType_Point.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/ApplicationCore/Public/GenericPlatform/ICursor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/Core/Public/Misc/AutomationTest.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/CoreUObject/Public/Blueprint/BlueprintSupport.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/CoreUObject/Public/UObject/PropertyWithSetterAndGetter.h" root0="FORCE_HIGHLIGHTING" />
@@ -77,10 +106,13 @@
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/GameplayTags/GameplayTags.Build.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/GameplayTags/Private/GameplayTagsModule.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/GameplayTags/Public/GameplayTagsModule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/InputCore/Classes/InputCoreTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/MovieScene/Public/Evaluation/PreAnimatedState/MovieScenePreAnimatedStateExtension.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/OpenGLDrv/Private/OpenGLResources.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/Renderer/Private/SceneOcclusion.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.6/Engine/Source/Runtime/SlateRHIRenderer/Private/SlateRHIRenderingPolicy.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_ConsumeItem.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_EquipItem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/GAS_SlashAbilitySystemComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AnimInstances/GAS_SlashBaseAnimInstance.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AnimInstances/Hero/GAS_SlashHeroAnimInstance.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -92,6 +124,7 @@
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/GameModes/GAS_SlashBaseGamemode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/HeroGameplayAbility_ConsumeItem.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/Abilities/HeroGameplayAbility_EquipItem.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/GAS_SlashAbilitySystemComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/AnimInstances/GAS_SlashBaseAnimInstance.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/AnimInstances/GAS_SlashCharacterAnimInstance.h" root0="FORCE_HIGHLIGHTING" />
@@ -734,7 +767,16 @@
       <workItem from="1761413751435" duration="2288000" />
       <workItem from="1761428320783" duration="5158000" />
       <workItem from="1761438294641" duration="5933000" />
-      <workItem from="1761507307520" duration="1805000" />
+      <workItem from="1761507307520" duration="4077000" />
+      <workItem from="1761520660035" duration="10833000" />
+      <workItem from="1761597681929" duration="1015000" />
+      <workItem from="1761657437787" duration="2209000" />
+      <workItem from="1761663112118" duration="852000" />
+      <workItem from="1761674317276" duration="3733000" />
+      <workItem from="1761681660787" duration="4825000" />
+      <workItem from="1761728996324" duration="236000" />
+      <workItem from="1761731454964" duration="1542000" />
+      <workItem from="1761755505208" duration="1564000" />
     </task>
     <servers />
   </component>

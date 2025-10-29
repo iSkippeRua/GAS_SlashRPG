@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "Components/ActorComponent.h"
 #include "Inv_EquipmentComponent.generated.h"
 
@@ -15,6 +16,9 @@ class UInv_InventoryComponent;
 class APlayerController;
 class USkeletalMeshComponent;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnItemEquipped, FGameplayTag, EquippedItemType, FGameplayTag, EquippedItemSlot);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnItemUnequipped, FGameplayTag, UnequippedItemType, FGameplayTag, UnequippedItemSlot);
+
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), Blueprintable)
 class INVENTORYSYSTEMPLUGIN_API UInv_EquipmentComponent : public UActorComponent
 {
@@ -26,6 +30,9 @@ public:
 	void SetIsProxy(bool bProxy) { bIsProxy = bProxy; }
 
 	void InitializeOwner(APlayerController* PlayerController);
+
+	FOnItemEquipped OnItemEquippedSignal;
+	FOnItemUnequipped OnItemUnequippedSignal;
 	
 protected:
 	virtual void BeginPlay() override;

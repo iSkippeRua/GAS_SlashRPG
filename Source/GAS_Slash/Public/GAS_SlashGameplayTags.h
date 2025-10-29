@@ -40,6 +40,7 @@ namespace GAS_SlashGameplayTags
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_SpecialWeaponAbility_Heavy);
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_PickUp_Stones);
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_ConsumeItem);
+	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Ability_EquipItem);
 	
 	GAS_SLASH_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Weapon_Axe);
 	

@@ -27,6 +27,12 @@ protected:
 
 	UFUNCTION()
 	void HandleItemConsumed(FGameplayTag ConsumedItemTag);
+
+	UFUNCTION()
+	void HandleItemEquipped(FGameplayTag EquippedItemType, FGameplayTag EquippedItemSlot);
+
+	UFUNCTION()
+	void HandleItemUnequipped(FGameplayTag UnequippedItemType, FGameplayTag UnequippedItemSlot);
     
 private:
 	FGenericTeamId HeroTeamID;
