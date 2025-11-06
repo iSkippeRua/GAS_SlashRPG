@@ -111,26 +111,6 @@ void FInv_ConsumableFragment::Manifest()
 	}
 }
 
-void FInv_HealthPotionFragment::OnConsume(APlayerController* PlayerController)
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Health Potion consumed! Healing by: %f"), GetValue()));
-}
-
-void FInv_ManaPotionFragment::OnConsume(APlayerController* PlayerController)
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Mana Potion consumed! Healing by: %f"), GetValue()));
-}
-
-void FInv_StrengthModifier::OnEquip(APlayerController* PlayerController)
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Item Equipped! Strength Attribute increased by: %f"), GetValue()));
-}
-
-void FInv_StrengthModifier::OnUnequip(APlayerController* PlayerController)
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Item Unequipped! Strength Attribute decreased by: %f"), GetValue()));
-}
-
 void FInv_EquipmentFragment::OnEquip(APlayerController* PlayerController)
 {
 	if (bEquipped)

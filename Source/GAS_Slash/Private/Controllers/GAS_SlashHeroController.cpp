@@ -18,8 +18,6 @@ AGAS_SlashHeroController::AGAS_SlashHeroController()
 void AGAS_SlashHeroController::OnPossess(APawn* InPawn)
 {
     Super::OnPossess(InPawn);
-
-    UE_LOG(LogTemp, Warning, TEXT("OnPossess called"));
     
     if (ACharacter* OwningCharacter = Cast<ACharacter>(InPawn))
     {
@@ -29,23 +27,14 @@ void AGAS_SlashHeroController::OnPossess(APawn* InPawn)
             EquipmentComponent->InitializeOwner(this);
 
             EquipmentComponent->OnItemEquippedSignal.AddUniqueDynamic(this, &ThisClass::HandleItemEquipped);
-
-            UE_LOG(LogTemp, Warning, TEXT("Successfully subscribed to the OnItemEquipped"));
-
             EquipmentComponent->OnItemUnequippedSignal.AddUniqueDynamic(this, &ThisClass::HandleItemUnequipped);
-
-            UE_LOG(LogTemp, Warning, TEXT("Successfully subscribed to the OnItemUnequipped"));
         }
 
         InventoryComponent = FindComponentByClass<UInv_InventoryComponent>();
         
         if (InventoryComponent)
         {
-            UE_LOG(LogTemp, Warning, TEXT("Found Inventory Component, binding delegate"));
-
             InventoryComponent->OnItemConsumed.AddUniqueDynamic(this, &ThisClass::HandleItemConsumed);
-
-            UE_LOG(LogTemp, Warning, TEXT("Successfully subscribed to the OnItemConsumed"));
         }
         else
         {
@@ -56,8 +45,6 @@ void AGAS_SlashHeroController::OnPossess(APawn* InPawn)
 
 void AGAS_SlashHeroController::HandleItemConsumed(FGameplayTag ConsumedItemTag)
 {
-    UE_LOG(LogTemp, Warning, TEXT("HandleItemConsumed called with tag: %s"), *ConsumedItemTag.ToString());
-    
     if(AGAS_SlashHeroCharacter* OwningHeroCharacter = Cast<AGAS_SlashHeroCharacter>(GetCharacter()))
     {
         OwningHeroCharacter->GetSlashAbilitySystemComponent()->SetLastConsumedItemTag(ConsumedItemTag);
@@ -67,8 +54,6 @@ void AGAS_SlashHeroController::HandleItemConsumed(FGameplayTag ConsumedItemTag)
 
 void AGAS_SlashHeroController::HandleItemEquipped(FGameplayTag EquippedItemType, FGameplayTag EquippedItemSlot)
 {
-    UE_LOG(LogTemp, Warning, TEXT("HandleItemEquipped called with tag: %s"), *EquippedItemType.ToString());
-
     if(AGAS_SlashHeroCharacter* OwningHeroCharacter = Cast<AGAS_SlashHeroCharacter>(GetCharacter()))
     {
         OwningHeroCharacter->GetSlashAbilitySystemComponent()->SetEquipItemData(
@@ -82,8 +67,6 @@ void AGAS_SlashHeroController::HandleItemEquipped(FGameplayTag EquippedItemType,
 
 void AGAS_SlashHeroController::HandleItemUnequipped(FGameplayTag UnequippedItemType, FGameplayTag UnequippedItemSlot)
 {
-    UE_LOG(LogTemp, Warning, TEXT("HandleItemUnequipped called with tag: %s"), *UnequippedItemType.ToString());
-
     if(AGAS_SlashHeroCharacter* OwningHeroCharacter = Cast<AGAS_SlashHeroCharacter>(GetCharacter()))
     {
         OwningHeroCharacter->GetSlashAbilitySystemComponent()->SetEquipItemData(

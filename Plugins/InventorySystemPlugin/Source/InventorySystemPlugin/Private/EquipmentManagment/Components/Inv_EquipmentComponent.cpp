@@ -127,9 +127,7 @@ void UInv_EquipmentComponent::OnItemEquipped(UInv_InventoryItem* EquippedItem)
 	if (!bIsProxy)
 	{
 		EquipmentFragment->OnEquip(OwningPlayerController.Get());
-
-		UE_LOG(LogTemp, Warning, TEXT("Broadcasting the Equipped Item to the Controller"));
-
+		
 		OnItemEquippedSignal.Broadcast(EquippedItem->GetItemManifestMutable().GetItemType(), EquippedItem->GetItemManifestMutable().GetSlotType());
 	}
 
@@ -158,9 +156,7 @@ void UInv_EquipmentComponent::OnItemUnequipped(UInv_InventoryItem* UnequippedIte
 	if (!bIsProxy)
 	{
 		EquipmentFragment->OnUnequip(OwningPlayerController.Get());
-
-		UE_LOG(LogTemp, Warning, TEXT("Broadcasting the Unequipped Item to the Controller"));
-
+		
 		OnItemUnequippedSignal.Broadcast(UnequippedItem->GetItemManifestMutable().GetItemType(), UnequippedItem->GetItemManifestMutable().GetSlotType());
 	}
 	

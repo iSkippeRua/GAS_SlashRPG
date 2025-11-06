@@ -30,7 +30,6 @@ void UHeroGameplayAbility_ConsumeItem::ConsumeItem()
 	const TSubclassOf<UGameplayEffect>* FoundEffect = ItemEffectMap.Find(ConsumedItemTag);
 	if (!FoundEffect)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("No GameplayEffect found for tag: %s"), *ConsumedItemTag.ToString());
 		EndAbility(GetCurrentAbilitySpecHandle(), GetCurrentActorInfo(), GetCurrentActivationInfo(), true, false);
 		return;
 	}
@@ -42,8 +41,6 @@ void UHeroGameplayAbility_ConsumeItem::ConsumeItem()
 		GetAbilityLevel(),
 		AbilitySystemComponent->MakeEffectContext()
 	);
-
-	UE_LOG(LogTemp, Warning, TEXT("Applied GameplayEffect for consumed tag: %s"), *ConsumedItemTag.ToString());
 	
 	EndAbility(GetCurrentAbilitySpecHandle(), GetCurrentActorInfo(), GetCurrentActivationInfo(), true, false);
 }

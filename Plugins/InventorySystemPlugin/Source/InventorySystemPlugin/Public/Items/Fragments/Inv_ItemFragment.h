@@ -184,7 +184,6 @@ struct FInv_HealthPotionFragment : public FInv_ConsumeModifier
 {
 	GENERATED_BODY()
 	
-	virtual void OnConsume(APlayerController* PlayerController) override;
 };
 
 USTRUCT(BlueprintType)
@@ -192,7 +191,6 @@ struct FInv_ManaPotionFragment : public FInv_ConsumeModifier
 {
 	GENERATED_BODY()
 	
-	virtual void OnConsume(APlayerController* PlayerController) override;
 };
 
 // Equipment Fragment
@@ -211,9 +209,6 @@ USTRUCT(BlueprintType)
 struct FInv_StrengthModifier : public FInv_EquipModifier
 {
 	GENERATED_BODY()
-
-	virtual void OnEquip(APlayerController* PlayerController) override;
-	virtual void OnUnequip(APlayerController* PlayerController) override;
 	
 };
 
