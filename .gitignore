@@ -72,3 +72,4 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallHealPotion.uasset
