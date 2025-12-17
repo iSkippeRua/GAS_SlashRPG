@@ -23,6 +23,10 @@ Author: Dmytro Chesniuk
 
 - Survival game mode with enemy waves. Multiple widgets, including a win screen, lose screen, pause menu, and main menu.
 
+- Fully working Inventory with different type of Items (that include Equippables, Craftables and Consumables), Item Description (unique Item Description for every Item), Proxy Mesh to showcase equipped items and
+  possibility to Equip/Unequip and Consume Items. Item consumption applies immediate effect on the Character (like Healing of HP or Rage). Equipping Item applies infinite effect that's canceled only when Item is Unequipped (increasing Max Heath, Attack Power
+  or Defence Power).
+
 ## Key Features
 
 1. Use of Gameplay Ability System to create engaging RPG combat experience.
@@ -38,7 +42,11 @@ Author: Dmytro Chesniuk
 11. Performant target lock system
 12. Different types of enemy with melee and long-ranged abilities
 13. Custom C++ ability task/latent action for combat
+14. Fully functional Inventory with additional advanced features
 
 ## YouTube Demonstration
-
+### Patch 0.1.0
 - https://youtu.be/z9tm2Ohr9nU
+
+### Patch 0.2.0
+- https://youtu.be/urFs-Ep4pVk
