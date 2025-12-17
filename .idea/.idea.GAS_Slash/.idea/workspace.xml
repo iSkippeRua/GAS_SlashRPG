@@ -14,12 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/GameModes/DT_EnemyWaveSpawner.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GameModes/DT_EnemyWaveSpawner.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Items/Potions/CT_PotionStats.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Items/Potions/CT_PotionStats.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Widgets/GameModeWidgets/WBP_PauseScreen.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/GameModeWidgets/WBP_PauseScreen.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeHealPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_LargeHealPotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallHealPotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Consumables/BP_Inv_SmallHealPotion.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +116,7 @@
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/GameModes/GAS_SlashBaseGamemode.h" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -135,6 +132,7 @@
     &quot;C++ Project.GAS_Slash.executor&quot;: &quot;Run&quot;,
     &quot;C/C++ Project.GAS_Slash.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -142,7 +140,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -784,13 +782,25 @@
       <workItem from="1763731838676" duration="1150000" />
       <workItem from="1763734685021" duration="1550000" />
       <workItem from="1764079760132" duration="180000" />
-      <workItem from="1764925601629" duration="756000" />
+      <workItem from="1764925601629" duration="1612000" />
+      <workItem from="1764927339441" duration="1865000" />
+      <workItem from="1764973203344" duration="3231000" />
+      <workItem from="1765067600761" duration="3298000" />
+      <workItem from="1765092136112" duration="1228000" />
+      <workItem from="1765142577950" duration="4324000" />
+      <workItem from="1765155749546" duration="1763000" />
+      <workItem from="1765161574968" duration="630000" />
+      <workItem from="1765163806645" duration="2667000" />
+      <workItem from="1765458817172" duration="707000" />
+      <workItem from="1765460034752" duration="143000" />
+      <workItem from="1765721353763" duration="156000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

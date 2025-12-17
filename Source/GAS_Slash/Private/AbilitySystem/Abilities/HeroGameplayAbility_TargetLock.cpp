@@ -18,10 +18,14 @@
 void UHeroGameplayAbility_TargetLock::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
 	TryLockOnTarget();
-	InitTargetLockMovement();
-	InitTargetLockMappingContext();
+
+	if (CurrentLockedActor)
+	{
+		InitTargetLockMovement();
+		InitTargetLockMappingContext();
 	
-	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
+		Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);	
+	}
 }
 
 void UHeroGameplayAbility_TargetLock::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
@@ -35,12 +39,25 @@ void UHeroGameplayAbility_TargetLock::EndAbility(const FGameplayAbilitySpecHandl
 
 void UHeroGameplayAbility_TargetLock::OnTargetLockTick(float DeltaTime)
 {
-	if(!CurrentLockedActor ||
+	/*if(!CurrentLockedActor ||
 		USlashFunctionLibrary::NativeDoesActorHaveTag(CurrentLockedActor, GAS_SlashGameplayTags::Shared_Status_Dead) ||
 		USlashFunctionLibrary::NativeDoesActorHaveTag(GetHeroCharacterFromActorInfo(), GAS_SlashGameplayTags::Shared_Status_Dead)
 		)
 	{
 		CancelTargetLockAbility();
+		return;
+	}*/
+
+	if (USlashFunctionLibrary::NativeDoesActorHaveTag(GetHeroCharacterFromActorInfo(), GAS_SlashGameplayTags::Shared_Status_Dead))
+	{
+		CancelTargetLockAbility();
+		return;
+	}
+
+	if (!CurrentLockedActor ||
+		USlashFunctionLibrary::NativeDoesActorHaveTag(CurrentLockedActor, GAS_SlashGameplayTags::Shared_Status_Dead))
+	{
+		TryLockOnTarget();
 		return;
 	}
 
@@ -137,7 +154,7 @@ void UHeroGameplayAbility_TargetLock::GetAvailableActorsToLock()
 	{
 		if(AActor* HitActor = TraceHit.GetActor())
 		{
-			if(HitActor != GetHeroCharacterFromActorInfo())
+			if(HitActor != GetHeroCharacterFromActorInfo() && !USlashFunctionLibrary::NativeDoesActorHaveTag(HitActor, GAS_SlashGameplayTags::Shared_Status_Dead))
 			{
 				AvailableActorsToLock.AddUnique(HitActor);
 			}
@@ -280,18 +297,26 @@ void UHeroGameplayAbility_TargetLock::ResetTargetLockMappingContext()
 	}
 	
 	const ULocalPlayer* LocalPlayer = GetHeroControllerFromActorInfo()->GetLocalPlayer();
-	
-	UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer);
 
-	check(Subsystem);
-
-	Subsystem->RemoveMappingContext(TargetLockMappingContext);
+	if (LocalPlayer)
+	{
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer))
+		{
+			Subsystem->RemoveMappingContext(TargetLockMappingContext);
+		}
+	}
 }
 
 void UHeroGameplayAbility_TargetLock::ResetTargetLockMovement()
 {
 	if(CachedDefaultMaxWalkSpeed > 0.f)
 	{
-		GetHeroCharacterFromActorInfo()->GetCharacterMovement()->MaxWalkSpeed = CachedDefaultMaxWalkSpeed;
+		if (AGAS_SlashHeroCharacter* HeroCharacter = Cast<AGAS_SlashHeroCharacter>(GetHeroCharacterFromActorInfo()))
+		{
+			if (UCharacterMovementComponent* CharacterMovement = HeroCharacter->GetCharacterMovement())
+			{
+				CharacterMovement->MaxWalkSpeed = CachedDefaultMaxWalkSpeed;
+			}
+		}
 	}
 }
