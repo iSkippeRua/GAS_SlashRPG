@@ -5,6 +5,7 @@
     <projectFile kind="Docker">../../EpicGames/UE_5.5/Engine/Source/Programs/Shared/EpicGames.Perforce.Fixture/EpicGames.Perforce.Fixture.csproj</projectFile>
     <projectFile>../../EpicGames/UE_5.5/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj</projectFile>
     <projectFile kind="Docker">../../EpicGames/UE_5.6/Engine/Source/Programs/Shared/EpicGames.Perforce.Fixture/EpicGames.Perforce.Fixture.csproj</projectFile>
+    <projectFile kind="Docker">C:/Program Files/Epic Games/UE_5.7/Engine/Source/Programs/Shared/EpicGames.Perforce.Fixture/EpicGames.Perforce.Fixture.csproj</projectFile>
     <projectFile>Intermediate/ProjectFiles/GAS_Slash.vcxproj</projectFile>
     <projectFile>Intermediate/ProjectFiles/UE5.vcxproj</projectFile>
   </component>
@@ -14,8 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GAS_Slash.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GAS_Slash.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AI/BTTask_RotateToFaceTarget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AI/BTTask_RotateToFaceTarget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_SlashEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_SlashEditor.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +137,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -538,10 +542,8 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -561,10 +563,8 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -585,6 +585,17 @@
           <option name="containerName" value="epicgames.perforce.fixture" />
           <option name="contextFolderPath" value="D:\UnrealEngineProjects\GAS_Slash 5.6" />
           <option name="sourceFilePath" value="../../EpicGames/UE_5.6/Engine/Source/Programs/Shared/EpicGames.Perforce.Fixture/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="EpicGames.Perforce.Fixture/Dockerfile (2)" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="epicgames.perforce.fixture" />
+          <option name="contextFolderPath" value="D:\UnrealProjects\GAS_SlashRPG" />
+          <option name="sourceFilePath" value="C:/Program Files/Epic Games/UE_5.7/Engine/Source/Programs/Shared/EpicGames.Perforce.Fixture/Dockerfile" />
         </settings>
       </deployment>
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
@@ -794,6 +805,13 @@
       <workItem from="1765458817172" duration="707000" />
       <workItem from="1765460034752" duration="143000" />
       <workItem from="1765721353763" duration="156000" />
+      <workItem from="1766571737916" duration="693000" />
+      <workItem from="1766593792237" duration="684000" />
+      <workItem from="1766594619306" duration="908000" />
+      <workItem from="1766749938644" duration="309000" />
+      <workItem from="1766937101297" duration="1672000" />
+      <workItem from="1767006059985" duration="1939000" />
+      <workItem from="1767012781222" duration="1141000" />
     </task>
     <servers />
   </component>

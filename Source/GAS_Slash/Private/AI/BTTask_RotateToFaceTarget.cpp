@@ -70,13 +70,16 @@ EBTNodeResult::Type UBTTask_RotateToFaceTarget::ExecuteTask(UBehaviorTreeCompone
 	return EBTNodeResult::InProgress;
 }
 
-inline void UBTTask_RotateToFaceTarget::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
+void UBTTask_RotateToFaceTarget::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
 {
+	Super::TickTask(OwnerComp, NodeMemory, DeltaSeconds);
+
 	FRotateToFaceTargetTaskMemory* Memory = CastInstanceNodeMemory<FRotateToFaceTargetTaskMemory>(NodeMemory);
 
-	if(!Memory->IsValid())
+	if(!Memory || !Memory->IsValid())
 	{
 		FinishLatentTask(OwnerComp, EBTNodeResult::Failed);
+		return;
 	}
 
 	if(HasReachedAnglePrecision(Memory->OwningPawn.Get(), Memory->TargetActor.Get()))
