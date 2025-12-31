@@ -41,6 +41,68 @@ void AInv_PlayerController::ToggleInventory()
 	}
 }
 
+void AInv_PlayerController::OnItemDetectionSphereBeginOverlap(AActor* ItemActor)
+{
+	if (!IsValid(ItemActor))
+		return;
+	
+	if (OverlappingItems.Contains(ItemActor))
+		return;
+	
+	OverlappingItems.Add(ItemActor);
+	TraceState = ETraceState::EOverlapping;
+	
+	UpdateCurrentOverlappingItem();
+}
+
+void AInv_PlayerController::OnItemDetectionSphereEndOverlap(AActor* ItemActor)
+{
+	if (!IsValid(ItemActor))
+		return;
+	
+	OverlappingItems.Remove(ItemActor);
+	
+	if (CurrentActor.Get() == ItemActor)
+	{
+		if (UActorComponent* Highlight = ItemActor->FindComponentByInterface(UInv_Highlight::StaticClass()))
+		{
+			IInv_Highlight::Execute_UnHighlight(Highlight);
+		}
+		
+		CurrentActor = nullptr;
+	}
+	
+	if (OverlappingItems.Num() > 0)
+	{
+		UpdateCurrentOverlappingItem();
+		return;
+	}
+	
+	TraceState = ETraceState::ELineTracing;
+	
+	if (IsValid(HUDWidget))
+	{
+		HUDWidget->HidePickUpMessage();
+	}
+	
+	/*
+	 *OverlappingItems.Remove(ItemActor);
+	 *
+	 *if (OverlappingItems.Num() == 0)
+	{
+		TraceState = ETraceState::ELineTracing;
+		CurrentActor = nullptr;
+		
+		if (IsValid(HUDWidget))
+		{
+			HUDWidget->HidePickUpMessage();
+		}
+		return;
+	}
+	
+	UpdateCurrentOverlappingItem();*/
+}
+
 void AInv_PlayerController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -98,6 +160,9 @@ void AInv_PlayerController::CreateHUDWidget()
 
 void AInv_PlayerController::TraceForItem()
 {
+	if (TraceState == ETraceState::EOverlapping)
+		return;
+	
 	if (!IsValid(GEngine) || !IsValid(GEngine->GameViewport))
 		return;
 	
@@ -154,4 +219,63 @@ void AInv_PlayerController::TraceForItem()
 			IInv_Highlight::Execute_UnHighlight(Highlight);
 		}
 	}
+}
+
+void AInv_PlayerController::UpdateCurrentOverlappingItem()
+{
+	APawn* PlayerPawn = GetPawn();
+	if (!PlayerPawn)
+		return;
+	
+	float BestDistanceSq = TNumericLimits<float>::Max();
+	AActor* BestActor = nullptr;
+	
+	for (const TWeakObjectPtr<AActor>& Item : OverlappingItems)
+	{
+		if (!Item.IsValid())
+			return;
+		
+		const float DistanceSq = FVector::DistSquared(
+			PlayerPawn->GetActorLocation(),
+			Item->GetActorLocation()
+		);
+		
+		if (DistanceSq < BestDistanceSq)
+		{
+			BestDistanceSq = DistanceSq;
+			BestActor = Item.Get();
+		}
+	}
+	
+	if (CurrentActor != BestActor)
+	{
+		SwapHighlight(CurrentActor.Get(), BestActor);
+	}
+	
+	CurrentActor = BestActor;
+	
+	if (CurrentActor.IsValid() && IsValid(HUDWidget))
+	{
+		if (UInv_ItemComponent* ItemComponent = CurrentActor->FindComponentByClass<UInv_ItemComponent>())
+		{
+			HUDWidget->ShowPickUpMessage(ItemComponent->GetPickUpMessage());
+		}
+	}
+}
+
+void AInv_PlayerController::SwapHighlight(AActor* OldActor, AActor* NewActor)
+{
+	if (IsValid(OldActor))
+	{
+		if (UActorComponent* Highlight = OldActor->FindComponentByInterface(UInv_Highlight::StaticClass()))
+		{
+			IInv_Highlight::Execute_UnHighlight(Highlight);
+		}
+	}
+	
+	if (NewActor)
+		if (UActorComponent* Highlight = NewActor->FindComponentByInterface(UInv_Highlight::StaticClass()))
+		{
+			IInv_Highlight::Execute_Highlight(Highlight);
+		}
 }

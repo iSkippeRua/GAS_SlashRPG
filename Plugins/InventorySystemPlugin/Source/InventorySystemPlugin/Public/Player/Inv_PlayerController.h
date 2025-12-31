@@ -11,6 +11,13 @@ class UInv_HUDWidget;
 class UInputMappingContext;
 class UInputAction;
 
+UENUM()
+enum class ETraceState : uint8
+{
+	ELineTracing,
+	EOverlapping
+};
+
 UCLASS()
 class INVENTORYSYSTEMPLUGIN_API AInv_PlayerController : public APlayerController
 {
@@ -23,6 +30,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	void ToggleInventory();
 	
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	void OnItemDetectionSphereBeginOverlap(AActor* ItemActor);
+	
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	void OnItemDetectionSphereEndOverlap(AActor* ItemActor);
+	
 protected:
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;
@@ -31,6 +44,8 @@ private:
 	void PrimaryInteract();
 	void CreateHUDWidget();
 	void TraceForItem();
+	void UpdateCurrentOverlappingItem();
+	void SwapHighlight(AActor* OldActor, AActor* NewActor);
 
 	TWeakObjectPtr<UInv_InventoryComponent> InventoryComponent;
 	
@@ -57,4 +72,10 @@ private:
 
 	TWeakObjectPtr<AActor> CurrentActor;
 	TWeakObjectPtr<AActor> LastActor;
+	
+	UPROPERTY()
+	TArray<TWeakObjectPtr<AActor>> OverlappingItems;
+	
+	UPROPERTY()
+	ETraceState TraceState = ETraceState::ELineTracing;
 };
