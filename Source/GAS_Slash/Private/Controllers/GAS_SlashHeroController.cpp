@@ -78,6 +78,11 @@ void AGAS_SlashHeroController::HandleItemUnequipped(FGameplayTag UnequippedItemT
     }
 }
 
+void AGAS_SlashHeroController::SetCurrentShop(UShop_InteractionComponent* ShopInteractionComponent)
+{
+    CurrentShopInteractionComponent = ShopInteractionComponent;
+}
+
 FGenericTeamId AGAS_SlashHeroController::GetGenericTeamId() const
 {
 	return HeroTeamID;
