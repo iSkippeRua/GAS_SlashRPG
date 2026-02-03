@@ -52,10 +52,6 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Damage")
 	FGameplayAttributeData DamageTaken;
 	ATTRIBUTE_ACCESSORS(UGAS_SlashAttributeSet, DamageTaken);
-	
-	UPROPERTY(BlueprintReadOnly, Category = "Currency")
-	FGameplayAttributeData Gold;
-	ATTRIBUTE_ACCESSORS(UGAS_SlashAttributeSet, Gold);
 
 private:
 	TWeakInterfacePtr<IPawnUIInterface> CachedPawnUIInterface;

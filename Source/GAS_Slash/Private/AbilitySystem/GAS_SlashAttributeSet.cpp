@@ -17,7 +17,6 @@ UGAS_SlashAttributeSet::UGAS_SlashAttributeSet()
 	InitMaxRage(1.f);
 	InitAttackPower(1.f);
 	InitDefencePower(1.f);
-	InitGold(0.f);
 }
 
 void UGAS_SlashAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data)

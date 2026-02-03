@@ -45,8 +45,7 @@ public class InventorySystemPlugin : ModuleRules
 				"SlateCore", 
 				"EnhancedInput",
 				"UMG",
-				"InputCore",
-				"GameplayAbilities"
+				"InputCore"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

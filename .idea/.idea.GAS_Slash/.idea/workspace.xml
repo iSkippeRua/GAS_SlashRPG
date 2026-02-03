@@ -15,16 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/InventorySystemPlugin.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/InventorySystemPlugin.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/GAS_Slash.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/GAS_SlashAttributeSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/GAS_SlashAttributeSet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashHeroCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashHeroCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Controllers/GAS_SlashHeroController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/GAS_SlashGameplayTags.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/GAS_SlashAttributeSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/AbilitySystem/GAS_SlashAttributeSet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashHeroCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashHeroCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/GAS_SlashHeroController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/GAS_SlashHeroController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Items/Components/Inv_ItemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Items/Components/Inv_ItemComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Player/Inv_PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Private/Player/Inv_PlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Components/Inv_ItemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Items/Components/Inv_ItemComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Player/Inv_PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Source/InventorySystemPlugin/Public/Player/Inv_PlayerController.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +50,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://C:/Program Files/Epic Games/UE_5.7/Engine/Source/Developer/LegacyProjectLauncher/Private/Widgets/Shared/ProjectLauncherDelegates.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_5.7/Engine/Source/Developer/LegacyProjectLauncher/Private/Widgets/Shared/SProjectLauncherBuildTargetSelector.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_5.7/Engine/Source/Developer/ShaderPreprocessor/Private/stb_preprocess/preprocessor.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_5.7/Engine/Source/Developer/TraceServices/Public/TraceServices/Containers/SlabAllocator.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_5.7/Engine/Source/Programs/Shared/EpicGames.UHT/Specifiers/UhtPropertyArgumentSpecifiers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_5.7/Engine/Source/Runtime/Engine/Private/AudioDecompress.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_ConsumeItem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/Abilities/HeroGameplayAbility_EquipItem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Private/AbilitySystem/GAS_SlashAbilitySystemComponent.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -81,16 +72,8 @@
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashHeroCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Components/Input/GAS_SlashInputComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Controllers/GAS_SlashHeroController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Framework/CAssetManager.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/GAS_SlashGameplayTags.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/GameModes/GAS_SlashBaseGamemode.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Inventory/PA_ShopItem.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Shop/Shop_AreaVolume.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/ItemToolTip.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/ItemWidget.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/ShopItemWidget.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/ShopWidget.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/ShopWidget.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -106,29 +89,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.AutomationTool.executor": "Run",
-    "C++ Project.GAS_Slash.executor": "Run",
-    "C/C++ Project.GAS_Slash.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.AutomationTool.executor&quot;: &quot;Run&quot;,
+    &quot;C++ Project.GAS_Slash.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ Project.GAS_Slash.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C/C++ Project.GAS_Slash">
     <configuration name="GAS_Slash" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -797,28 +780,7 @@
       <workItem from="1767023284722" duration="1824000" />
       <workItem from="1767072822261" duration="8460000" />
       <workItem from="1767107706340" duration="6947000" />
-      <workItem from="1767154416470" duration="8923000" />
-      <workItem from="1767548344816" duration="1190000" />
-      <workItem from="1767586062141" duration="8850000" />
-      <workItem from="1767940538593" duration="1667000" />
-      <workItem from="1767954564078" duration="67000" />
-      <workItem from="1767962046751" duration="3202000" />
-      <workItem from="1767972309314" duration="7636000" />
-      <workItem from="1768034999101" duration="1606000" />
-      <workItem from="1768115143113" duration="17787000" />
-      <workItem from="1768191269695" duration="9038000" />
-      <workItem from="1768222512383" duration="33000" />
-      <workItem from="1768227853674" duration="2329000" />
-      <workItem from="1768277730259" duration="8151000" />
-      <workItem from="1768291390322" duration="1919000" />
-      <workItem from="1768304548045" duration="6877000" />
-      <workItem from="1768363914790" duration="3339000" />
-      <workItem from="1768367544453" duration="251000" />
-      <workItem from="1768367850280" duration="6145000" />
-      <workItem from="1768449517494" duration="12256000" />
-      <workItem from="1768483431587" duration="949000" />
-      <workItem from="1768801460493" duration="3391000" />
-      <workItem from="1768968592408" duration="6818000" />
+      <workItem from="1767154416470" duration="1664000" />
     </task>
     <servers />
   </component>

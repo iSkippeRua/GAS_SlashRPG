@@ -15,9 +15,7 @@
 #include "Components/Combat/HeroCombatComponent.h"
 #include "Components/UI/HeroUIComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
-#include "Controllers/GAS_SlashHeroController.h"
 #include "GameModes/GAS_SlashBaseGamemode.h"
-#include "Shop/Shop_InteractionComponent.h"
 
 AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
 {
@@ -111,7 +109,6 @@ void AGAS_SlashHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 	UGAS_SlashInputComponent* GAS_SlashInputComponent = CastChecked<UGAS_SlashInputComponent>(PlayerInputComponent);
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_Move, ETriggerEvent::Triggered, this, &ThisClass::Input_Move);
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_Look, ETriggerEvent::Triggered, this, &ThisClass::Input_Look);
-	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_ShopInteract, ETriggerEvent::Started, this, &ThisClass::Input_InteractWithShop);
 
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Triggered, this, &ThisClass::Input_SwitchTargetTriggered);
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Completed, this, &ThisClass::Input_SwitchTargetCompleted);
@@ -151,19 +148,6 @@ void AGAS_SlashHeroCharacter::Input_Look(const FInputActionValue& InputActionVal
 	if(LookAxisVector.Y != 0.f)
 	{
 		AddControllerPitchInput(LookAxisVector.Y);
-	}
-}
-
-void AGAS_SlashHeroCharacter::Input_InteractWithShop(const FInputActionValue& InputActionValue)
-{
-	AGAS_SlashHeroController* HeroController = Cast<AGAS_SlashHeroController>(GetController());
-	if (!HeroController)
-		return;
-	
-	UShop_InteractionComponent* CurrentShop = HeroController->GetCurrentShop();
-	if (CurrentShop && CurrentShop->IsPlayerInShopArea())
-	{
-		CurrentShop->ToggleShopMenu();
 	}
 }
 
