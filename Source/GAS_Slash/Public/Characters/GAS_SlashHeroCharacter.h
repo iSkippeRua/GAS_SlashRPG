@@ -64,6 +64,8 @@ private:
 	
 	void Input_SwitchTargetTriggered(const FInputActionValue& InputActionValue);
 	void Input_SwitchTargetCompleted(const FInputActionValue& InputActionValue);
+	
+	void Input_ToggleShop(const FInputActionValue& InputActionValue);
 
 	void Input_PickUpStonesStarted(const FInputActionValue& InputActionValue);
 

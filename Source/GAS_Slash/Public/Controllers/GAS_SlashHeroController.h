@@ -9,6 +9,7 @@
 #include "EquipmentManagment/Components/Inv_EquipmentComponent.h"
 #include "GAS_SlashHeroController.generated.h"
 
+class UGAS_SlashShopComponent;
 
 UCLASS()
 class GAS_SLASH_API AGAS_SlashHeroController : public AInv_PlayerController, public IGenericTeamAgentInterface
@@ -19,6 +20,8 @@ public:
 	AGAS_SlashHeroController();
 	
 	virtual FGenericTeamId GetGenericTeamId() const override;
+	
+	void ToggleShop();
 
 protected:
 	virtual void BeginPlay() override;
@@ -40,6 +43,9 @@ private:
     UPROPERTY(VisibleAnywhere)
     UInv_EquipmentComponent* EquipmentComponent;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	UInv_InventoryComponent* InventoryComponent;
+	
+	UPROPERTY(VisibleAnywhere)
+	UGAS_SlashShopComponent* ShopComponent;
 };

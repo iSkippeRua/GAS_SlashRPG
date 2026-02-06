@@ -1,18 +1,19 @@
 // Dmytro Chesniuk All Rights Reserved
 
-
 #include "Controllers/GAS_SlashHeroController.h"
 #include "GAS_SlashGameplayTags.h"
 #include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
 #include "Characters/GAS_SlashHeroCharacter.h"
 #include "GameFramework/Character.h"
 #include "InventoryManagement/Components/Inv_InventoryComponent.h"
+#include "Shop/GAS_SlashShopComponent.h"
 
 AGAS_SlashHeroController::AGAS_SlashHeroController()
 {
     HeroTeamID = FGenericTeamId(0);
     
     EquipmentComponent = CreateDefaultSubobject<UInv_EquipmentComponent>(TEXT("EquipmentComponent"));
+    ShopComponent = CreateDefaultSubobject<UGAS_SlashShopComponent>(TEXT("ShopComponent"));
 }
 
 void AGAS_SlashHeroController::OnPossess(APawn* InPawn)
@@ -75,6 +76,14 @@ void AGAS_SlashHeroController::HandleItemUnequipped(FGameplayTag UnequippedItemT
             false
         );
         OwningHeroCharacter->GetSlashAbilitySystemComponent()->TryActivateAbilityByTag(GAS_SlashGameplayTags::Player_Ability_EquipItem);
+    }
+}
+
+void AGAS_SlashHeroController::ToggleShop()
+{
+    if (ShopComponent)
+    {
+        ShopComponent->ToggleShop();
     }
 }
 

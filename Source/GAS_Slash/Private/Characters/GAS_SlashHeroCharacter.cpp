@@ -15,6 +15,7 @@
 #include "Components/Combat/HeroCombatComponent.h"
 #include "Components/UI/HeroUIComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "Controllers/GAS_SlashHeroController.h"
 #include "GameModes/GAS_SlashBaseGamemode.h"
 
 AGAS_SlashHeroCharacter::AGAS_SlashHeroCharacter()
@@ -112,6 +113,8 @@ void AGAS_SlashHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Triggered, this, &ThisClass::Input_SwitchTargetTriggered);
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Completed, this, &ThisClass::Input_SwitchTargetCompleted);
+	
+	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_ToggleShop, ETriggerEvent::Started, this, &ThisClass::Input_ToggleShop);
 
 	GAS_SlashInputComponent->BindNativeInputAction(InputConfigDataAsset, GAS_SlashGameplayTags::InputTag_PickUp_Stones, ETriggerEvent::Started, this, &ThisClass::Input_PickUpStonesStarted);
 	
@@ -165,6 +168,14 @@ void AGAS_SlashHeroCharacter::Input_SwitchTargetCompleted(const FInputActionValu
 		SwitchDirection.X > 0.f ? GAS_SlashGameplayTags::Player_Event_SwitchTarget_Right : GAS_SlashGameplayTags::Player_Event_SwitchTarget_Left,
 		Data
 	);
+}
+
+void AGAS_SlashHeroCharacter::Input_ToggleShop(const FInputActionValue& InputActionValue)
+{
+	if (AGAS_SlashHeroController* HeroController = Cast<AGAS_SlashHeroController>(GetController()))
+	{
+		HeroController->ToggleShop();
+	}
 }
 
 void AGAS_SlashHeroCharacter::Input_PickUpStonesStarted(const FInputActionValue& InputActionValue)
