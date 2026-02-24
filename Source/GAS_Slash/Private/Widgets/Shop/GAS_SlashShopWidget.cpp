@@ -1,9 +1,9 @@
 ﻿#include "Widgets/Shop/GAS_SlashShopWidget.h"
 #include "Shop/GAS_SlashShopComponent.h"
 #include "Shop/GAS_SlashShopItemData.h"
-#include "Components/ListView.h"
 #include "Components/TextBlock.h"
 #include "Components/Button.h"
+#include "Components/TileView.h"
 
 void UGAS_SlashShopWidget::NativeConstruct()
 {

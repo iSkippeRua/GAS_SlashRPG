@@ -98,7 +98,9 @@ bool UGAS_SlashShopComponent::TryPurchaseItem(UGAS_SlashShopItemData* ShopItem, 
 	if (!ShopItem->IsAvailableForPurchase())
 		return false;
 	
-	if (!ShopItem->HasUnlimitedStock() && ShopItem->GetStockQuantity() < Quantity)
+	int32 CurrentStock = GetCurrentStock(ShopItem);
+	
+	if (!ShopItem->HasUnlimitedStock() && CurrentStock < Quantity)
 	{
 		OnItemOutOfStock.Broadcast();
 		return false;
@@ -115,7 +117,8 @@ bool UGAS_SlashShopComponent::TryPurchaseItem(UGAS_SlashShopItemData* ShopItem, 
 	
 	if (!ShopItem->HasUnlimitedStock())
 	{
-		ShopItem->DecrementStock(Quantity);
+		int32 NewStock = FMath::Max(0, CurrentStock - Quantity);
+		RuntimeStockCounts.Add(ShopItem, NewStock);
 	}
 	
 	SpawnPurchasedItem(ShopItem, Quantity);
@@ -233,6 +236,23 @@ bool UGAS_SlashShopComponent::GetLoadedShopItems(TArray<UGAS_SlashShopItemData*>
 	return OutItems.Num() > 0;
 }
 
+int32 UGAS_SlashShopComponent::GetCurrentStock(UGAS_SlashShopItemData* ShopItem) const
+{
+	if (!ShopItem)
+		return 0;
+	
+	if (ShopItem->HasUnlimitedStock())
+		return -1;
+	
+	if (const int32* StockPtr = RuntimeStockCounts.Find(ShopItem))
+	{
+		return *StockPtr;
+	}
+	
+	// Safety fallback in case if something goes wrong
+	return -1;
+}
+
 void UGAS_SlashShopComponent::OnShopItemsLoaded()
 {
 	UAssetManager& AssetManager = UAssetManager::Get();
@@ -241,11 +261,18 @@ void UGAS_SlashShopComponent::OnShopItemsLoaded()
 	AssetManager.GetPrimaryAssetObjectList(UGAS_SlashShopItemData::GetShopItemAssetType(), LoadedObjects);
 	
 	LoadedShopItems.Empty();
+	RuntimeStockCounts.Empty();
+	
 	for (UObject* Object : LoadedObjects)
 	{
 		if (UGAS_SlashShopItemData* ShopItem = Cast<UGAS_SlashShopItemData>(Object))
 		{
 			LoadedShopItems.Add(ShopItem);
+			
+			if (!ShopItem->HasUnlimitedStock())
+			{
+				RuntimeStockCounts.Add(ShopItem, ShopItem->GetStockQuantity());
+			}
 		}
 	}
 	

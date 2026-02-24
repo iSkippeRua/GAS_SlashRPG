@@ -60,25 +60,37 @@ void UGAS_SlashShopItemWidget::UpdateDisplay()
 	
 	if (ItemStockText)
 	{
-		if (ShopItemData->HasUnlimitedStock())
+		if (UGAS_SlashShopComponent* ShopComponent = GetShopComponent())
 		{
-			ItemStockText->SetText(FText::FromString("Unlimited"));
-		}
-		else
-		{
-			FText ItemStockTextFormat = FText::Format(
-				FText::FromString("Stock: {0}"),
-				FText::AsNumber(ShopItemData->GetStockQuantity())
-			);
-			
-			ItemStockText->SetText(ItemStockTextFormat);
+			int32 CurrentStock = ShopComponent->GetCurrentStock(ShopItemData);
+				
+			if (CurrentStock < 0)
+			{
+				ItemStockText->SetText(FText::FromString("Unlimited"));
+			}
+			else
+			{
+				FText StockTextFormat =	FText::Format(
+					FText::FromString("Stock: {0}"),
+					FText::AsNumber(CurrentStock)
+				);
+				ItemStockText->SetText(StockTextFormat);
+			}
 		}
 	}
 	
 	if (PurchaseButton)
 	{
-		const bool bCanPurchase = ShopItemData->IsAvailableForPurchase() &&
-			(ShopItemData->HasUnlimitedStock() || ShopItemData->GetStockQuantity() > 0);
+		bool bCanPurchase = ShopItemData->IsAvailableForPurchase();
+		
+		if (bCanPurchase)
+		{
+			if (UGAS_SlashShopComponent* ShopComponent = GetShopComponent())
+			{
+				int32 CurrentStock = ShopComponent->GetCurrentStock(ShopItemData);
+				bCanPurchase = CurrentStock < 0 || CurrentStock > 0;
+			}
+		}
 		
 		PurchaseButton->SetIsEnabled(bCanPurchase);
 	}
@@ -89,14 +101,21 @@ void UGAS_SlashShopItemWidget::OnPurchaseButtonClicked()
 	if (!ShopItemData)
 		return;
 	
-	if (AGAS_SlashHeroController* HeroController = Cast<AGAS_SlashHeroController>(GetOwningPlayer()))
+	if (UGAS_SlashShopComponent* ShopComponent = GetShopComponent())
 	{
-		if (UGAS_SlashShopComponent* ShopComponent = HeroController->FindComponentByClass<UGAS_SlashShopComponent>())
+		if (ShopComponent->TryPurchaseItem(ShopItemData, 1))
 		{
-			if (ShopComponent->TryPurchaseItem(ShopItemData, 1))
-			{
-				UpdateDisplay();
-			}
+			UpdateDisplay();
 		}
 	}
+}
+
+UGAS_SlashShopComponent* UGAS_SlashShopItemWidget::GetShopComponent() const
+{
+	if (AGAS_SlashHeroController* HeroController = Cast<AGAS_SlashHeroController>(GetOwningPlayer()))
+	{
+		return HeroController->FindComponentByClass<UGAS_SlashShopComponent>();
+	}
+	
+	return nullptr;
 }

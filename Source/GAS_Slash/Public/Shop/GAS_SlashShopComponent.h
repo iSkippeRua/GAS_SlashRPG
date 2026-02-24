@@ -49,6 +49,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Shop")
 	bool GetLoadedShopItems(TArray<UGAS_SlashShopItemData*>& OutItems) const;
 	
+	UFUNCTION(BlueprintCallable, Category = "Shop")
+	int32 GetCurrentStock(UGAS_SlashShopItemData* ShopItem) const;
+	
 	bool IsShopOpen() const { return bShopOpen; }
 	UGAS_SlashShopWidget* GetShopWidget() const { return ShopWidget; }
 	
@@ -84,6 +87,9 @@ private:
 	
 	UPROPERTY()
 	TArray<UGAS_SlashShopItemData*> LoadedShopItems;
+	
+	UPROPERTY()
+	TMap<UGAS_SlashShopItemData*, int32> RuntimeStockCounts;
 	
 	bool bShopOpen = false;
 	

@@ -6,7 +6,7 @@
 
 class UGAS_SlashShopComponent;
 class UGAS_SlashShopItemData;
-class UListView;
+class UTileView;
 class UTextBlock;
 class UButton;
 
@@ -33,7 +33,7 @@ protected:
 	void OnCloseButtonClicked();
 	
 	UPROPERTY(meta=(BindWidget))
-	UListView* ShopItemListView;
+	UTileView* ShopItemListView;
 	
 	UPROPERTY(meta=(BindWidget))
 	UTextBlock* GoldAmountText;

@@ -5,6 +5,7 @@
 #include "Blueprint/IUserObjectListEntry.h"
 #include "GAS_SlashShopItemWidget.generated.h"
 
+class UGAS_SlashShopComponent;
 class UGAS_SlashShopItemData;
 class UImage;
 class UTextBlock;
@@ -24,6 +25,7 @@ protected:
 	void OnPurchaseButtonClicked();
 	
 	void UpdateDisplay();
+	UGAS_SlashShopComponent* GetShopComponent() const;
 	
 	UPROPERTY(meta=(BindWidget))
 	TObjectPtr<UImage> ItemIcon;
