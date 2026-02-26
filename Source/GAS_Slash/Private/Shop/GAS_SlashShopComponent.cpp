@@ -38,6 +38,10 @@ void UGAS_SlashShopComponent::BeginPlay()
 		ConstructShopUI();
 	}
 	
+	FGameplayAttribute GoldAttribute = UGAS_SlashAttributeSet::GetGoldAttribute();
+	
+	SlashAbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(GoldAttribute).AddUObject(this, &ThisClass::OnGoldChanged);
+	
 	LoadShopItems();
 }
 
@@ -176,6 +180,14 @@ float UGAS_SlashShopComponent::GetPlayerGold() const
 	}
 	
 	return 0.f;
+}
+
+void UGAS_SlashShopComponent::OnGoldChanged(const FOnAttributeChangeData& Data)
+{
+	if (IsValid(ShopWidget) && bShopOpen)
+	{
+		ShopWidget->UpdateGoldDisplay();
+	}
 }
 
 void UGAS_SlashShopComponent::ModifyPlayerGold(float Amount)

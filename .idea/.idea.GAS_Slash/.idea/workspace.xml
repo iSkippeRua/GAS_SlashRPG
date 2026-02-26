@@ -14,26 +14,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/BP_GAS_SlashHeroController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/DA_InputConfig.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/DA_InputConfig.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/CT_HeroStats.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/CT_HeroStats.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_StartUp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/GameplayEffect/GE_Hero_StartUp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/Input/IMC_Default.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Widgets/HeroWidgets/WBP_HeroOverlay.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/HeroWidgets/WBP_HeroOverlay.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Green.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Green.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Steel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Steel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Yellow.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/HeadArmor/WBP_Inv_Mask_Yellow.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Green.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Green.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Red.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Yellow.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/InventorySystemPlugin/Content/Items/Equippables/TorsoArmor/WBP_Inv_Cloak_Yellow.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/BP_EnemyCharacter_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/BP_EnemyCharacter_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_Death_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_Death_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_HitReact_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_HitReact_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashEnemyCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Shop/GAS_SlashShopComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Shop/GAS_SlashShopComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Widgets/Shop/GAS_SlashShopItemWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Widgets/Shop/GAS_SlashShopItemWidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Widgets/Shop/GAS_SlashShopWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Widgets/Shop/GAS_SlashShopWidget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashEnemyCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Shop/GAS_SlashShopComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Shop/GAS_SlashShopComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/GAS_SlashShopItemWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/GAS_SlashShopItemWidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/GAS_SlashShopWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Widgets/Shop/GAS_SlashShopWidget.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -831,6 +819,7 @@
       <workItem from="1771925372616" duration="894000" />
       <workItem from="1771929972504" duration="2332000" />
       <workItem from="1771944835799" duration="9649000" />
+      <workItem from="1772019805101" duration="12063000" />
     </task>
     <servers />
   </component>

@@ -24,6 +24,9 @@ public:
 	virtual UPawnUIComponent* GetPawnUIComponent() const override;
 
 	virtual UEnemyUIComponent* GetEnemyUIComponent() const override;
+	
+	UFUNCTION(BlueprintCallable, Category = "Reward")
+	void ProvideGoldRewardToPlayer(AActor* Player);
 
 protected:
 	virtual void BeginPlay() override;
@@ -54,6 +57,15 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
 	UWidgetComponent* EnemyHealthWidgetComponent;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Reward", meta = (AllowPrivateAccess = "true"))
+	float GoldRewardMin = 10.f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Reward", meta = (AllowPrivateAccess = "true"))
+	float GoldRewardMax = 30.f;
+	
+	UPROPERTY(BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
+	AActor* LastAttacker;
 
 	UFUNCTION()
 	virtual void OnBodyCollisionBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

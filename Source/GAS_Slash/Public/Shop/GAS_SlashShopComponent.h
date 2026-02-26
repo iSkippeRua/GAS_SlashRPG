@@ -5,6 +5,7 @@
 #include "GameplayTagContainer.h"
 #include "GAS_SlashShopComponent.generated.h"
 
+struct FOnAttributeChangeData;
 class AGAS_SlashHeroController;
 class UGAS_SlashShopWidget;
 class UGAS_SlashShopItemData;
@@ -62,6 +63,8 @@ public:
 	
 protected:
 	virtual void BeginPlay() override;
+	
+	void OnGoldChanged(const FOnAttributeChangeData& Data);
 	
 	void OnShopItemsLoaded();
 	void ModifyPlayerGold(float Amount);

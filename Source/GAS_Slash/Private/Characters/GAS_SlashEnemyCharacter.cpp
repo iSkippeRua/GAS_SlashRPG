@@ -1,8 +1,6 @@
 // Dmytro Chesniuk All Rights Reserved
 
-
 #include "Characters/GAS_SlashEnemyCharacter.h"
-
 #include "Components/BoxComponent.h"
 #include "Components/WidgetComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -11,6 +9,8 @@
 #include "Engine/AssetManager.h"
 #include "Widgets/SlashWidgetBase.h"
 #include "SlashFunctionLibrary.h"
+#include "AbilitySystem/GAS_SlashAbilitySystemComponent.h"
+#include "AbilitySystem/GAS_SlashAttributeSet.h"
 
 #include "DataAssets/StartUpData/DataAsset_EnemyStartUpData.h"
 #include "GameModes/GAS_SlashBaseGamemode.h"
@@ -60,6 +60,36 @@ UPawnUIComponent* AGAS_SlashEnemyCharacter::GetPawnUIComponent() const
 UEnemyUIComponent* AGAS_SlashEnemyCharacter::GetEnemyUIComponent() const
 {
 	return EnemyUIComponent;
+}
+
+void AGAS_SlashEnemyCharacter::ProvideGoldRewardToPlayer(AActor* Player)
+{
+	AActor* ActorForReward = Player ? Player : LastAttacker;
+	
+	if (!ActorForReward)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("ProvideGoldRewardToPlayer: No actor found!"));
+		return;
+	}
+	
+	if (AGAS_SlashBaseCharacter* SlashCharacter = Cast<AGAS_SlashBaseCharacter>(ActorForReward))
+	{
+		UGAS_SlashAbilitySystemComponent* PlayerAbilitySystemComponent = SlashCharacter->GetSlashAbilitySystemComponent();
+		
+		if (!PlayerAbilitySystemComponent)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("ProvideGoldRewardToPlayer: Player has no AbilitySystemComponent!"));
+			return;
+		}
+		
+		const int32 GoldReward = FMath::RandRange(GoldRewardMin, GoldRewardMax);
+		
+		PlayerAbilitySystemComponent->ApplyModToAttribute(
+			UGAS_SlashAttributeSet::GetGoldAttribute(),
+			EGameplayModOp::Additive,
+			GoldReward
+		);
+	}
 }
 
 void AGAS_SlashEnemyCharacter::BeginPlay()
