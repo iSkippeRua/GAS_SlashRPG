@@ -14,14 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/BP_EnemyCharacter_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/BP_EnemyCharacter_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/DevMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DevMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_Death_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_Death_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BP_GruntlingGlacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BP_GruntlingGlacer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BP_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BP_GruntlingGuardian.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_HitReact_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_HitReact_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Characters/GAS_SlashEnemyCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Private/Shop/GAS_SlashShopComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Private/Shop/GAS_SlashShopComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Characters/GAS_SlashEnemyCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash/Public/Shop/GAS_SlashShopComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash/Public/Shop/GAS_SlashShopComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/HeroWidgets/WBP_HeroOverlay.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/HeroWidgets/WBP_HeroOverlay.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -820,6 +819,25 @@
       <workItem from="1771929972504" duration="2332000" />
       <workItem from="1771944835799" duration="9649000" />
       <workItem from="1772019805101" duration="12063000" />
+      <workItem from="1772119771338" duration="2619000" />
+      <workItem from="1772301735344" duration="1340000" />
+      <workItem from="1772726488413" duration="1947000" />
+      <workItem from="1772757788931" duration="1405000" />
+      <workItem from="1773123113326" duration="672000" />
+      <workItem from="1773234177353" duration="1248000" />
+      <workItem from="1773292595861" duration="3507000" />
+      <workItem from="1773298739827" duration="2904000" />
+      <workItem from="1773362255833" duration="1605000" />
+      <workItem from="1773364562934" duration="779000" />
+      <workItem from="1773365744605" duration="1007000" />
+      <workItem from="1773671644978" duration="1459000" />
+      <workItem from="1773717352233" duration="2725000" />
+      <workItem from="1773728232903" duration="1992000" />
+      <workItem from="1773756263999" duration="952000" />
+      <workItem from="1773758476997" duration="1091000" />
+      <workItem from="1773812658879" duration="3054000" />
+      <workItem from="1773827460617" duration="2011000" />
+      <workItem from="1773836153120" duration="5219000" />
     </task>
     <servers />
   </component>
