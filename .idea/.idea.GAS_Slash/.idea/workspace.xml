@@ -15,12 +15,12 @@
   <component name="ChangeListManager">
     <list default="true" id="856a46b6-8403-4a66-9e38-8e367613972a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GAS_Slash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BP_GruntlingGlacer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Glacer/BP_GruntlingGlacer.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BP_GruntlingGuardian.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/EnemyCharacter/GruntlingGuardian/Guardian/BP_GruntlingGuardian.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/SurvivalGameModeMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_HitReact_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Shared/GameplayAbility/GA_Enemy_HitReact_Base.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/BP_MapManager.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/BP_MapManager.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/M_MiniMap.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/M_MiniMap.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/S_MapData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/S_MapData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/WBP_MiniMap.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/Gameplay/LevelMap/WBP_MiniMap.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Widgets/HeroWidgets/WBP_HeroOverlay.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Widgets/HeroWidgets/WBP_HeroOverlay.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GAS_Slash.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GAS_Slash.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -837,7 +837,12 @@
       <workItem from="1773758476997" duration="1091000" />
       <workItem from="1773812658879" duration="3054000" />
       <workItem from="1773827460617" duration="2011000" />
-      <workItem from="1773836153120" duration="5219000" />
+      <workItem from="1773836153120" duration="5815000" />
+      <workItem from="1773897322118" duration="2172000" />
+      <workItem from="1773922799241" duration="1990000" />
+      <workItem from="1774323739811" duration="3156000" />
+      <workItem from="1774531988942" duration="1272000" />
+      <workItem from="1774539843355" duration="555000" />
     </task>
     <servers />
   </component>
